@@ -20,7 +20,7 @@ struct VideoView: View {
                     Spacer()
                 }
                 .frame(width: 400, height: 300)
-            }.frame(width: 400, height: 300)
+            }
 //            Spacer()
             Text(step.name).font(.title).fontWeight(.bold).padding()
             Text(step.desc).font(.title2).fontWeight(.bold).padding()
@@ -28,11 +28,11 @@ struct VideoView: View {
             Button {} label: {
                 Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
             }.buttonStyle(.borderedProminent).padding()
-            Spacer()
+//            Spacer()
     //
         
         
-        }
+        }.ignoresSafeArea()
 
     }
 }

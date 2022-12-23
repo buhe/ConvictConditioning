@@ -42,7 +42,7 @@ struct ContentView: View {
 //                }
 //            }
 //            Text("Select an item")
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.tops) { item in
                     NavigationLink {
