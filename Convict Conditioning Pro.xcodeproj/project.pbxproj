@@ -16,6 +16,8 @@
 		3F19F8F729558B35005C0558 /* Convict_Conditioning_ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F8F629558B35005C0558 /* Convict_Conditioning_ProTests.swift */; };
 		3F19F90129558B35005C0558 /* Convict_Conditioning_ProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90029558B35005C0558 /* Convict_Conditioning_ProUITests.swift */; };
 		3F19F90329558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90229558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift */; };
+		3F19F9102955A4ED005C0558 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90F2955A4ED005C0558 /* Model.swift */; };
+		3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9112955A50D005C0558 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3F19F8FC29558B35005C0558 /* Convict Conditioning ProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Convict Conditioning ProUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F19F90029558B35005C0558 /* Convict_Conditioning_ProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convict_Conditioning_ProUITests.swift; sourceTree = "<group>"; };
 		3F19F90229558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convict_Conditioning_ProUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F19F90F2955A4ED005C0558 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3F19F9112955A50D005C0558 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3F19F8EA29558B35005C0558 /* Convict_Conditioning_Pro.entitlements */,
 				3F19F8E329558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld */,
 				3F19F8EB29558B35005C0558 /* Preview Content */,
+				3F19F90F2955A4ED005C0558 /* Model.swift */,
+				3F19F9112955A50D005C0558 /* ViewModel.swift */,
 			);
 			path = "Convict Conditioning Pro";
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F19F9102955A4ED005C0558 /* Model.swift in Sources */,
 				3F19F8E029558B34005C0558 /* Convict_Conditioning_ProApp.swift in Sources */,
 				3F19F8E529558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld in Sources */,
 				3F19F8E729558B34005C0558 /* ContentView.swift in Sources */,
+				3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */,
 				3F19F8E229558B34005C0558 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
