@@ -6,16 +6,41 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct VideoView: View {
     let step: Step
     var body: some View {
-        Text(step.videoName)
+        VStack {
+            VideoPlayer(player: AVPlayer(url:  URL(string: Model.VIDEO_PREFIX + step.videoName)!)) {
+                VStack {
+                    Text("Watermark")
+                        .foregroundColor(.black)
+                        .background(.white.opacity(0.7))
+                    Spacer()
+                }
+                .frame(width: 400, height: 300)
+            }.frame(width: 400, height: 300)
+//            Spacer()
+            Text(step.name).font(.title).fontWeight(.bold).padding()
+            Text(step.desc).font(.title2).fontWeight(.bold).padding()
+            Divider().frame(height: 2).overlay(.gray).padding()
+            Button {} label: {
+                Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
+            }.buttonStyle(.borderedProminent).padding()
+            Spacer()
+    //
+        
+        
+        }
+
     }
 }
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView(step: Model().steps["Pushup"]!.first!)
+        VideoView(step: Model().steps["Pushup"]!.first!).preferredColorScheme(.light)
+        
+        VideoView(step: Model().steps["Pushup"]!.first!).preferredColorScheme(.dark)
     }
 }

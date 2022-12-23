@@ -25,12 +25,6 @@ struct StepView: View {
                             
                         }.background( NavigationLink("", destination: VideoView(step: step)).opacity(0) )
                     }
-//                    NavigationLink{
-//
-//                    } label: {
-//
-//
-//                    }.buttonStyle(PlainButtonStyle())
                     Spacer()
                 }
          
