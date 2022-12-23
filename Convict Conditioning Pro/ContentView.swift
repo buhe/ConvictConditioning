@@ -46,13 +46,15 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.tops) { item in
                     NavigationLink {
-                        
+                        StepView(steps: viewModel.model.steps[item.title]!)
                     } label: {
                         HStack {
                             Text(item.title).fontWeight(.bold)
+                                .font(.title2)
                             Spacer()
                             Text("\(item.step)/10").fontWeight(.bold)
-                        }
+                                .font(.title2)
+                        }.padding()
                         
                     }
                 }

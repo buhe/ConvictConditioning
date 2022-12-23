@@ -10,7 +10,7 @@ import Foundation
 struct Model {
     static let VIDEO_PREFIX = "https://pf-video.s3.us-west-2.amazonaws.com/"
     var steps: [String: [Step]] = [
-        "pushUp": [
+        "Pushup": [
             Step(name: "STEP1 WALL PUSHUPS", desc: """
                         The goal is 3×50
                         Then next step!
@@ -50,7 +50,12 @@ struct Model {
             Step(name: "STEP10 ONE-ARM PUSHUPS", desc: """
                         The final goal is 1×100
                         """, step: 10, videoName: "a10.mp4", info: "a10.jpg")
-        ]
+        ],
+        "Squat": [],
+        "Pullup": [],
+        "Leg raise": [],
+        "Bridge": [],
+        "Handstand Pushup": []
     ]
 }
 

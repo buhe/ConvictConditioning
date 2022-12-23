@@ -10,12 +10,12 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var model = Model()
     var tops = [
-        TopItem(title: "PUSH UP", image: "a.png"),
-        TopItem(title: "SQUAT", image: "b.png"),
-        TopItem(title: "PULL UP", image: "c.png"),
-        TopItem(title: "LEG RAISE", image: "d.png"),
-        TopItem(title: "BRIDGE", image: "e.png"),
-        TopItem(title: "HANDSTAND", image: "f.png")
+        TopItem(title: "Pushup", image: "a.png"),
+        TopItem(title: "Squat", image: "b.png"),
+        TopItem(title: "Pullup", image: "c.png"),
+        TopItem(title: "Leg raise", image: "d.png"),
+        TopItem(title: "Bridge", image: "e.png"),
+        TopItem(title: "Handstand Pushup", image: "f.png")
     ]
 }
 
