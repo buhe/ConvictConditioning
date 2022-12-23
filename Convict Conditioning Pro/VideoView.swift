@@ -14,13 +14,13 @@ struct VideoView: View {
         VStack {
             VideoPlayer(player: AVPlayer(url:  URL(string: Model.VIDEO_PREFIX + step.videoName)!)) {
                 VStack {
-                    Text("Watermark")
+                    Text("")
                         .foregroundColor(.black)
                         .background(.white.opacity(0.7))
                     Spacer()
                 }
                 .frame(width: 400, height: 300)
-            }
+            }.aspectRatio(4 / 3, contentMode: .fit)
 //            Spacer()
             Text(step.name).font(.title).fontWeight(.bold).padding()
             Text(step.desc).font(.title2).fontWeight(.bold).padding()
@@ -28,7 +28,7 @@ struct VideoView: View {
             Button {} label: {
                 Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
             }.buttonStyle(.borderedProminent).padding()
-//            Spacer()
+            Spacer()
     //
         
         
