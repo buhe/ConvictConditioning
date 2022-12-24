@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StepView: View {
     let steps: [Step]
+    let title: String
     @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
         List {
@@ -31,13 +32,13 @@ struct StepView: View {
          
                 
             }
-        }
+        }.navigationTitle(title).fontWeight(.bold)
     }
 }
 
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
-        StepView(steps: Model().steps["Pushup"]!)
-        StepView(steps: Model().steps["Pushup"]!).preferredColorScheme(.dark)
+        StepView(steps: Model().steps["Pushup"]!, title: "Pushup")
+        StepView(steps: Model().steps["Pushup"]!, title: "Pushup").preferredColorScheme(.dark)
     }
 }
