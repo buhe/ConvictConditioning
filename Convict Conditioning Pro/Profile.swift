@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Profile: View {
     var viewModel: ViewModel
-//    @State var data: [Double] = [1,2]
     var chartView: some View {
         VStack {
             RadarChart(data: viewModel.tops.map { Double($0.step)}).padding(.vertical)
@@ -29,10 +28,10 @@ struct Profile: View {
     }
     var body: some View {
         VStack {
-            chartView
-            ShareLink(item: Image(uiImage: generateSnapshot()), preview: SharePreview("Profile", image: Image(uiImage: generateSnapshot())))
-            // FIXME - share image is not corret
-                .buttonStyle(.borderedProminent).padding()
+            chartView.padding(.vertical)
+//            ShareLink(item: Image(uiImage: generateSnapshot()), preview: SharePreview("Profile", image: Image(uiImage: generateSnapshot())))
+//            // FIXME - share image is not corret
+//                .buttonStyle(.borderedProminent).padding()
         }
         
     }
