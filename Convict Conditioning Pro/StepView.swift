@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StepView: View {
     let steps: [Step]
+    @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
         List {
             ForEach(steps) { step in
@@ -23,7 +24,7 @@ struct StepView: View {
                                 .font(.title3)
                                 .fontWeight(.bold)
                             Divider()
-                        }.background( NavigationLink("", destination: VideoView(step: step)).opacity(0) )
+                        }.background( NavigationLink("", destination: VideoView(step: step).environment(\.managedObjectContext, viewContext)).opacity(0) )
                     }
                     Spacer()
                 }.listRowSeparator(.hidden)

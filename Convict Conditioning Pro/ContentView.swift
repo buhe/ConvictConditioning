@@ -48,7 +48,7 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.tops) { item in
                     NavigationLink {
-                        StepView(steps: viewModel.model.steps[item.title]!)
+                        StepView(steps: viewModel.model.steps[item.title]!).environment(\.managedObjectContext, viewContext)
                     } label: {
                         HStack {
                             Image(item.image)
