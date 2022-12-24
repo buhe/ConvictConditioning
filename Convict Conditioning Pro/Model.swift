@@ -65,11 +65,11 @@ struct Model {
                         Then next step!
                         """, step: 3, videoName: "b03.mp4", info: "b3.jpg"),
             Step(name: "STEP4 HALF SQUATS", desc: """
-                        The goal is 2×25
+                        The goal is 2×50
                         Then next step!
                         """, step: 4, videoName: "b04.mp4", info: "b4.jpg"),
             Step(name: "STEP5 FULL SQUATS", desc: """
-                        The goal is 2×20
+                        The goal is 2×30
                         Then next step!
                         """, step: 5, videoName: "b05.mp4", info: "b5.jpg"),
             Step(name: "STEP6 CLOSE SQUATS", desc: """
@@ -89,57 +89,57 @@ struct Model {
                         Then next step!
                         """, step: 9, videoName: "b09.mp4", info: "b9.jpg"),
             Step(name: "STEP10 ONE-LEG SQUATS", desc: """
-                        The final goal is 1×100
+                        The final goal is 2×50
                         """, step: 10, videoName: "b10.mp4", info: "b10.jpg")
         ],
         "Pullup": [
             Step(name: "STEP1 VERTICAL PULLS", desc: """
-                        The goal is 3×50
+                        The goal is 3×40
                         Then next step!
                         """, step: 1, videoName: "c01.mp4", info: "c1.jpg"),
             Step(name: "STEP2 HORIZONTAL PULLS", desc: """
-                        The goal is 3×40
+                        The goal is 3×30
                         Then next step!
                         """, step: 2, videoName: "c02.mp4", info: "c2.jpg"),
             Step(name: "STEP3 JACKKNIFE PULLUPS", desc: """
-                        The goal is 3×30
+                        The goal is 3×20
                         Then next step!
                         """, step: 3, videoName: "c03.mp4", info: "c3.jpg"),
             Step(name: "STEP4 HALF PULLUPS", desc: """
-                        The goal is 2×25
+                        The goal is 2×15
                         Then next step!
                         """, step: 4, videoName: "c04.mp4", info: "c4.jpg"),
             Step(name: "STEP5 FULL PULLUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×10
                         Then next step!
                         """, step: 5, videoName: "c05.mp4", info: "c5.jpg"),
             Step(name: "STEP6 CLOSE PULLUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×10
                         Then next step!
                         """, step: 6, videoName: "c06.mp4", info: "c6.jpg"),
             Step(name: "STEP7 UNEVEN PULLUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×9
                         Then next step!
                         """, step: 7, videoName: "c07.mp4", info: "c7.jpg"),
             Step(name: "STEP8 1/2 ONE-ARM PULLUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×8
                         Then next step!
                         """, step: 8, videoName: "c08.mp4", info: "c8.jpg"),
             Step(name: "STEP9 ASSISTED ONE-ARM PULLUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×7
                         Then next step!
                         """, step: 9, videoName: "c09.mp4", info: "c9.jpg"),
             Step(name: "STEP10 ONE-ARM PULLUPS", desc: """
-                        The final goal is 1×100
+                        The final goal is 2×7
                         """, step: 10, videoName: "c10.mp4", info: "c10.jpg")
         ],
         "Leg raise": [
             Step(name: "STEP1 KNEE TUCKS", desc: """
-                        The goal is 3×50
+                        The goal is 3×40
                         Then next step!
                         """, step: 1, videoName: "d01.mp4", info: "d1.jpg"),
             Step(name: "STEP2 FLAT KNEE RAISES", desc: """
-                        The goal is 3×40
+                        The goal is 3×35
                         Then next step!
                         """, step: 2, videoName: "d02.mp4", info: "d2.jpg"),
             Step(name: "STEP3 FLAT BENT LEG RAISES", desc: """
@@ -155,23 +155,23 @@ struct Model {
                         Then next step!
                         """, step: 5, videoName: "d05.mp4", info: "d5.jpg"),
             Step(name: "STEP6 HANGING KNEE RAISES", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 6, videoName: "d06.mp4", info: "d6.jpg"),
             Step(name: "STEP7 HANGING BENT LEG RAISES", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 7, videoName: "d07.mp4", info: "d7.jpg"),
             Step(name: "STEP8 HANGING FROG RAISES", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 8, videoName: "d08.mp4", info: "d8.jpg"),
             Step(name: "STEP9 PARTIAL STRAIGHT RAISES", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 9, videoName: "d09.mp4", info: "d9.jpg"),
             Step(name: "STEP10 HANGING STRAIGHT LEG RAISES", desc: """
-                        The final goal is 1×100
+                        The final goal is 2×30
                         """, step: 10, videoName: "d10.mp4", info: "d10.jpg")
         ],
         "Bridge": [
