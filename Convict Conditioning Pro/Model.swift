@@ -196,64 +196,64 @@ struct Model {
                         Then next step!
                         """, step: 5, videoName: "e05.mp4", info: "e5.jpg"),
             Step(name: "STEP6 FULL BRIDGES", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 6, videoName: "e06.mp4", info: "e6.jpg"),
             Step(name: "STEP7 WALL WALKING BRIDGES (DOWN)", desc: """
-                        The goal is 2×20
+                        The goal is 2×10
                         Then next step!
                         """, step: 7, videoName: "e07.mp4", info: "e7.jpg"),
             Step(name: "STEP8 WALL WALKING BRIDGES (UP)", desc: """
-                        The goal is 2×20
+                        The goal is 2×8
                         Then next step!
                         """, step: 8, videoName: "e08.mp4", info: "e8.jpg"),
             Step(name: "STEP9 CLOSING BRIDGES", desc: """
-                        The goal is 2×20
+                        The goal is 2×6
                         Then next step!
                         """, step: 9, videoName: "e09.mp4", info: "e9.jpg"),
             Step(name: "STEP10 STAND-TO-STAND BRIDGES", desc: """
-                        The final goal is 1×100
+                        The final goal is 2×30
                         """, step: 10, videoName: "e10.mp4", info: "e10.jpg")
         ],
         "Handstand Pushup": [
             Step(name: "STEP1 WALL HEADSTANDS", desc: """
-                        The goal is 3×50
+                        The goal is 2 min
                         Then next step!
                         """, step: 1, videoName: "f01.mp4", info: "f1.jpg"),
             Step(name: "STEP2 CROW STANDS", desc: """
-                        The goal is 3×40
+                        The goal is 1 min
                         Then next step!
                         """, step: 2, videoName: "f02.mp4", info: "f2.jpg"),
             Step(name: "STEP3 WALL HANDSTANDS", desc: """
-                        The goal is 3×30
+                        The goal is 2 min
                         Then next step!
                         """, step: 3, videoName: "f03.mp4", info: "f3.jpg"),
             Step(name: "STEP4 1/2 HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×25
+                        The goal is 2×20
                         Then next step!
                         """, step: 4, videoName: "f04.mp4", info: "f4.jpg"),
             Step(name: "STEP5 HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×15
                         Then next step!
                         """, step: 5, videoName: "f05.mp4", info: "f5.jpg"),
             Step(name: "STEP6 CLOSE HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×12
                         Then next step!
                         """, step: 6, videoName: "f06.mp4", info: "f6.jpg"),
             Step(name: "STEP7 UNEVEN HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×10
                         Then next step!
                         """, step: 7, videoName: "f07.mp4", info: "f7.jpg"),
             Step(name: "STEP8 HALF ONE-ARM HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×8
                         Then next step!
                         """, step: 8, videoName: "f08.mp4", info: "f8.jpg"),
             Step(name: "STEP9 LEVER HANDSTAND PUSHUPS", desc: """
-                        The goal is 2×20
+                        The goal is 2×6
                         Then next step!
                         """, step: 9, videoName: "f09.mp4", info: "f9.jpg"),
             Step(name: "STEP10 ONE-ARM HANDSTAND PUSHUPS", desc: """
-                        The final goal is 1×100
+                        The final goal is 2×5
                         """, step: 10, videoName: "f10.mp4", info: "f10.jpg")
         ]
     ]
