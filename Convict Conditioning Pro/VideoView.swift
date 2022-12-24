@@ -12,6 +12,7 @@ struct VideoView: View {
     let step: Step
     @State var player: AutoRotate?
     @State var foundStep = false
+    @State var showInfo = false
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -50,14 +51,15 @@ struct VideoView: View {
     }
     var body: some View {
         VStack {
-            player.aspectRatio(4 / 3, contentMode: .fit).toolbar {
+            ZStack {
+                player.aspectRatio(4 / 3, contentMode: .fit)
+            }.toolbar {
                 Button {
-                    print("info")
+                    showInfo = true
                 } label: {
                     Label("info", systemImage: "info.circle")
                 }
             }
-            
             Text(step.name).font(.title).fontWeight(.bold).padding()
             Text(step.desc).font(.title2).fontWeight(.bold).padding()
             Divider().frame(height: 2).overlay(.gray).padding()
@@ -83,6 +85,8 @@ struct VideoView: View {
                                 break
                             }
                         }
+        }.sheet(isPresented: $showInfo) {
+            Image(step.info)
         }
 
     }
