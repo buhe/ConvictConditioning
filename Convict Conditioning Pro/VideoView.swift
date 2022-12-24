@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import SwiftUIX
 
 struct VideoView: View {
     let step: Step
@@ -52,6 +53,12 @@ struct VideoView: View {
     var body: some View {
         VStack {
             ZStack {
+                VStack{
+                    Spacer()
+                    ActivityIndicator()
+                    Spacer()
+                }
+                
                 player.aspectRatio(4 / 3, contentMode: .fit)
             }.toolbar {
                 Button {
@@ -65,7 +72,7 @@ struct VideoView: View {
             Divider().frame(height: 2).overlay(.gray).padding()
             button
             Spacer()
-        }.ignoresSafeArea().onAppear {
+        }.onAppear {
             
             for item in items {
                 if item.type == step.type && item.step == step.step {

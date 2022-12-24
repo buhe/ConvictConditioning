@@ -24,6 +24,7 @@
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
 		3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF87A4F29571EAE0036672A /* AutoRotate.swift */; };
+		3FF87A5329572A710036672A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF87A5229572A710036672A /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF87A5329572A710036672A /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +185,9 @@
 			dependencies = (
 			);
 			name = "Convict Conditioning Pro";
+			packageProductDependencies = (
+				3FF87A5229572A710036672A /* SwiftUIX */,
+			);
 			productName = "Convict Conditioning Pro";
 			productReference = 3F19F8DC29558B34005C0558 /* Convict Conditioning Pro.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 3F19F8D329558B34005C0558;
+			packageReferences = (
+				3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 3F19F8DD29558B34005C0558 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -660,6 +668,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FF87A5229572A710036672A /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3F19F8E329558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld */ = {
