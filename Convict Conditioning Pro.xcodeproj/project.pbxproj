@@ -23,6 +23,7 @@
 		3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8AB82956A39500DB4BE0 /* RadarView.swift */; };
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
+		3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF87A4F29571EAE0036672A /* AutoRotate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3F7A8AB82956A39500DB4BE0 /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3FF87A4F29571EAE0036672A /* AutoRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				3F19F9152955CE40005C0558 /* VideoView.swift */,
 				3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */,
 				3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */,
+				3FF87A4F29571EAE0036672A /* AutoRotate.swift */,
 			);
 			path = "Convict Conditioning Pro";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				3F19F9102955A4ED005C0558 /* Model.swift in Sources */,
 				3F19F8E029558B34005C0558 /* Convict_Conditioning_ProApp.swift in Sources */,
 				3F19F8E529558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld in Sources */,
+				3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */,
 				3F19F8E729558B34005C0558 /* ContentView.swift in Sources */,
 				3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */,
 				3F19F9162955CE40005C0558 /* VideoView.swift in Sources */,

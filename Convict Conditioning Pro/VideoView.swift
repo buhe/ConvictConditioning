@@ -10,7 +10,7 @@ import AVKit
 
 struct VideoView: View {
     let step: Step
-    @State var player: AVPlayer?
+    @State var player: AutoRotate?
     @State var foundStep = false
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -50,15 +50,7 @@ struct VideoView: View {
     }
     var body: some View {
         VStack {
-            VideoPlayer(player: player) {
-                VStack {
-                    Text("")
-                        .foregroundColor(.black)
-                        .background(.white.opacity(0.7))
-                    Spacer()
-                }
-                .frame(width: 400, height: 300)
-            }.aspectRatio(4 / 3, contentMode: .fit)
+            player.aspectRatio(4 / 3, contentMode: .fit)
 //            Spacer()
             Text(step.name).font(.title).fontWeight(.bold).padding()
             Text(step.desc).font(.title2).fontWeight(.bold).padding()
@@ -79,7 +71,7 @@ struct VideoView: View {
             CacheManager.shared.getFileWith(stringUrl: Model.VIDEO_PREFIX + step.videoName) { result in
                             switch result {
                             case .success(let url):
-                                self.player = AVPlayer(url: url)
+                                self.player = AutoRotate(url: url)
 //                                self.player?.play()
                                 break
                             case .failure:
