@@ -10,9 +10,10 @@ import AVKit
 
 struct VideoView: View {
     let step: Step
+    @State var player: AVPlayer?
     var body: some View {
         VStack {
-            VideoPlayer(player: AVPlayer(url:  URL(string: Model.VIDEO_PREFIX + step.videoName)!)) {
+            VideoPlayer(player: player) {
                 VStack {
                     Text("")
                         .foregroundColor(.black)
@@ -32,7 +33,20 @@ struct VideoView: View {
     //
         
         
-        }.ignoresSafeArea()
+        }.ignoresSafeArea().onAppear {
+            CacheManager.shared.getFileWith(stringUrl: Model.VIDEO_PREFIX + step.videoName) { result in
+                            switch result {
+                            case .success(let url):
+                                self.player = AVPlayer(url: url)
+//                                self.player?.play()
+                                break
+                            case .failure:
+                                //TODO - show alert
+//                                self.showError.toggle()
+                                break
+                            }
+                        }
+        }
 
     }
 }
