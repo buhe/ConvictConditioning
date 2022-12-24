@@ -16,6 +16,8 @@ struct ContentView: View {
 //        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
 //        animation: .default)
 //    private var items: FetchedResults<Item>
+    
+    @State var showProfile = false
 
     var body: some View {
 //        NavigationView {
@@ -60,11 +62,14 @@ struct ContentView: View {
                 }
             }.toolbar {
                 Button {
-                    
+                    showProfile.toggle()
                 } label: {
                     Label("Profile", systemImage: "person.circle")
                 }
+            }.sheet(isPresented: $showProfile) {
+                Profile()
             }
+            
         }
     }
 
@@ -110,5 +115,6 @@ private let itemFormatter: DateFormatter = {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(viewModel: ViewModel()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(viewModel: ViewModel()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).preferredColorScheme(.dark)
     }
 }
