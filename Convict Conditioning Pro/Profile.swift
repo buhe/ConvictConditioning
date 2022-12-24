@@ -31,7 +31,7 @@ struct Profile: View {
         VStack {
             chartView
             ShareLink(item: Image(uiImage: generateSnapshot()), preview: SharePreview("Profile", image: Image(uiImage: generateSnapshot())))
-            .buttonStyle(.borderedProminent)
+                .buttonStyle(.borderedProminent).padding()
         }
         
     }
