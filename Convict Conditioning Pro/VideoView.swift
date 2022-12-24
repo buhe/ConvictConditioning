@@ -14,6 +14,7 @@ struct VideoView: View {
     @State var player: AutoRotate?
     @State var foundStep = false
     @State var showInfo = false
+    @State private var showingAlert = false
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -66,12 +67,9 @@ struct VideoView: View {
                     Label("info", systemImage: "info.circle")
                 }
             }
-//            Spacer()
             Text(step.name).font(.title).fontWeight(.bold).padding(.large)
             Text(step.desc).font(.title2).fontWeight(.bold).padding(.large)
             Divider().frame(height: 2).overlay(.gray).padding(.large)
-//            Spacer()
-//            Spacer(minLength: 144)
             button
             Spacer()
         }.onAppear {
@@ -85,18 +83,17 @@ struct VideoView: View {
                             switch result {
                             case .success(let url):
                                 self.player = AutoRotate(url: url)
-//                                self.player?.play()
                                 break
                             case .failure:
-                                //TODO - show alert
-//                                self.showError.toggle()
+                                showingAlert = true
                                 break
                             }
                         }
         }
-//        .ignoresSafeArea()
         .sheet(isPresented: $showInfo) {
             Image(step.info)
+        }.alert("Check your network, please", isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
         }
 
     }
