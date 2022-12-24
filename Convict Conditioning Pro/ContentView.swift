@@ -11,6 +11,10 @@ import CoreData
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [],
+        animation: .default)
+    private var items: FetchedResults<Item>
 //
 //    @FetchRequest(
 //        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -69,6 +73,8 @@ struct ContentView: View {
                 }
             }.sheet(isPresented: $showProfile) {
                 Profile()
+            }.onAppear {
+                viewModel.top(itemMaps: Dictionary(grouping: items, by: { $0.type }))
             }
             
         }
