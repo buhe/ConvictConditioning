@@ -51,6 +51,7 @@ struct ContentView: View {
                         StepView(steps: viewModel.model.steps[item.title]!)
                     } label: {
                         HStack {
+                            Image(item.image)
                             Text(item.title).fontWeight(.bold)
                                 .font(.title2)
                             Spacer()
@@ -105,12 +106,12 @@ struct ContentView: View {
 //    }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+//private let itemFormatter: DateFormatter = {
+//    let formatter = DateFormatter()
+//    formatter.dateStyle = .short
+//    formatter.timeStyle = .medium
+//    return formatter
+//}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
