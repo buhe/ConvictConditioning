@@ -72,7 +72,7 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
             }.sheet(isPresented: $showProfile) {
-                Profile()
+                Profile(viewModel: viewModel)
             }.onAppear {
                 viewModel.top(itemMaps: Dictionary(grouping: items, by: { $0.type }))
             }

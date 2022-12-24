@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct Profile: View {
+    var viewModel: ViewModel
+//    @State var data: [Double] = [1,2]
     var chartView: some View {
         VStack {
-            RadarChart(data: [1,1,10,1,5,1]).padding(.vertical)
+            RadarChart(data: viewModel.tops.map { Double($0.step)}).padding(.vertical)
             List {
-                ForEach(["a", "b", "c", "d", "e"],id: \.self) {
+                ForEach(viewModel.tops) {
                     item in
-                    Text(item)
+                    HStack {
+                        Text(item.title)
+                        Spacer()
+                        Text(String(item.step) + "/10")
+                    }
+                    
                 }
             }.listStyle(PlainListStyle())
         }
@@ -23,9 +30,6 @@ struct Profile: View {
     var body: some View {
         VStack {
             chartView
-            
-            
-            
             ShareLink(item: Image(uiImage: generateSnapshot()), preview: SharePreview("Profile", image: Image(uiImage: generateSnapshot())))
             .buttonStyle(.borderedProminent)
         }
@@ -42,7 +46,7 @@ struct Profile: View {
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile()
-        Profile().preferredColorScheme(.dark)
+        Profile(viewModel: ViewModel())
+        Profile(viewModel: ViewModel()).preferredColorScheme(.dark)
     }
 }
