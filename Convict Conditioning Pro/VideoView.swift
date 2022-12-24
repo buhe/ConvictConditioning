@@ -27,7 +27,7 @@ struct VideoView: View {
             Button {
             } label: {
                 Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
-            }.buttonStyle(.borderedProminent).padding().disabled(true)
+            }.buttonStyle(.borderedProminent).padding(.large).disabled(true)
         } else {
             Button {
                 let newItem = Item(context: viewContext)
@@ -46,7 +46,7 @@ struct VideoView: View {
                 }
             } label: {
                 Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
-            }.buttonStyle(.borderedProminent).padding()
+            }.buttonStyle(.borderedProminent).padding(.large)
         }
         
     }
@@ -58,7 +58,6 @@ struct VideoView: View {
                     ActivityIndicator()
                     Spacer()
                 }
-                
                 player.aspectRatio(4 / 3, contentMode: .fit)
             }.toolbar {
                 Button {
@@ -67,13 +66,15 @@ struct VideoView: View {
                     Label("info", systemImage: "info.circle")
                 }
             }
-            Text(step.name).font(.title).fontWeight(.bold).padding()
-            Text(step.desc).font(.title2).fontWeight(.bold).padding()
-            Divider().frame(height: 2).overlay(.gray).padding()
+//            Spacer()
+            Text(step.name).font(.title).fontWeight(.bold).padding(.large)
+            Text(step.desc).font(.title2).fontWeight(.bold).padding(.large)
+            Divider().frame(height: 2).overlay(.gray).padding(.large)
+//            Spacer()
+//            Spacer(minLength: 144)
             button
             Spacer()
         }.onAppear {
-            
             for item in items {
                 if item.type == step.type && item.step == step.step {
                     foundStep = true
@@ -92,7 +93,9 @@ struct VideoView: View {
                                 break
                             }
                         }
-        }.sheet(isPresented: $showInfo) {
+        }
+//        .ignoresSafeArea()
+        .sheet(isPresented: $showInfo) {
             Image(step.info)
         }
 
