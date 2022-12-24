@@ -22,11 +22,11 @@ struct StepView: View {
                             Text(step.desc)
                                 .font(.title3)
                                 .fontWeight(.bold)
-                            
+                            Divider()
                         }.background( NavigationLink("", destination: VideoView(step: step)).opacity(0) )
                     }
                     Spacer()
-                }
+                }.listRowSeparator(.hidden)
          
                 
             }
@@ -37,5 +37,6 @@ struct StepView: View {
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
         StepView(steps: Model().steps["Pushup"]!)
+        StepView(steps: Model().steps["Pushup"]!).preferredColorScheme(.dark)
     }
 }
