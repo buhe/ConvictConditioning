@@ -50,16 +50,19 @@ struct VideoView: View {
     }
     var body: some View {
         VStack {
-            player.aspectRatio(4 / 3, contentMode: .fit)
-//            Spacer()
+            player.aspectRatio(4 / 3, contentMode: .fit).toolbar {
+                Button {
+                    print("info")
+                } label: {
+                    Label("info", systemImage: "info.circle")
+                }
+            }
+            
             Text(step.name).font(.title).fontWeight(.bold).padding()
             Text(step.desc).font(.title2).fontWeight(.bold).padding()
             Divider().frame(height: 2).overlay(.gray).padding()
             button
             Spacer()
-    //
-        
-        
         }.ignoresSafeArea().onAppear {
             
             for item in items {
