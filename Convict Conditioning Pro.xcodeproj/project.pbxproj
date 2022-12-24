@@ -20,6 +20,8 @@
 		3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9112955A50D005C0558 /* ViewModel.swift */; };
 		3F19F9142955CB5D005C0558 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9132955CB5D005C0558 /* StepView.swift */; };
 		3F19F9162955CE40005C0558 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9152955CE40005C0558 /* VideoView.swift */; };
+		3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8AB82956A39500DB4BE0 /* RadarView.swift */; };
+		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		3F19F9112955A50D005C0558 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3F19F9132955CB5D005C0558 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		3F19F9152955CE40005C0558 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		3F7A8AB82956A39500DB4BE0 /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		3F19F8DE29558B34005C0558 /* Convict Conditioning Pro */ = {
 			isa = PBXGroup;
 			children = (
+				3F7A8AB52956A2EF00DB4BE0 /* radar */,
 				3F19F8DF29558B34005C0558 /* Convict_Conditioning_ProApp.swift */,
 				3F19F8E129558B34005C0558 /* Persistence.swift */,
 				3F19F8E629558B34005C0558 /* ContentView.swift */,
@@ -118,6 +123,7 @@
 				3F19F9112955A50D005C0558 /* ViewModel.swift */,
 				3F19F9132955CB5D005C0558 /* StepView.swift */,
 				3F19F9152955CE40005C0558 /* VideoView.swift */,
+				3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */,
 			);
 			path = "Convict Conditioning Pro";
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				3F19F90229558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift */,
 			);
 			path = "Convict Conditioning ProUITests";
+			sourceTree = "<group>";
+		};
+		3F7A8AB52956A2EF00DB4BE0 /* radar */ = {
+			isa = PBXGroup;
+			children = (
+				3F7A8AB82956A39500DB4BE0 /* RadarView.swift */,
+			);
+			path = radar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +295,10 @@
 				3F19F8E029558B34005C0558 /* Convict_Conditioning_ProApp.swift in Sources */,
 				3F19F8E529558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld in Sources */,
 				3F19F8E729558B34005C0558 /* ContentView.swift in Sources */,
+				3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */,
 				3F19F9162955CE40005C0558 /* VideoView.swift in Sources */,
 				3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */,
+				3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */,
 				3F19F9142955CB5D005C0558 /* StepView.swift in Sources */,
 				3F19F8E229558B34005C0558 /* Persistence.swift in Sources */,
 			);
