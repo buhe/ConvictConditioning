@@ -28,7 +28,6 @@ class ViewModel: ObservableObject {
                 }
             }
         }
-        print("----\(tops)")
     }
 }
 
