@@ -37,10 +37,9 @@ struct RadarChartPath: Shape {
     guard
       3 <= data.count,
       let minimum = data.min(),
-      0 <= minimum,
-      let maximum = data.max()
+      0 <= minimum
     else { return Path() }
-    
+    let maximum: Double = Double(10)
     let radius = min(rect.maxX - rect.midX, rect.maxY - rect.midY)
     var path = Path()
     
