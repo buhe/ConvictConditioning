@@ -57,6 +57,7 @@ struct VideoView: View {
                 VStack{
                     Spacer()
                     ActivityIndicator()
+                    Text("Downloading...")
                     Spacer()
                 }
                 player.aspectRatio(4 / 3, contentMode: .fit)
