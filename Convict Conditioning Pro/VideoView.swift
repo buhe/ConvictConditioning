@@ -66,7 +66,8 @@ struct VideoView: View {
                 } label: {
                     Label("info", systemImage: "info.circle")
                 }
-            }
+            }.frame(height: UIScreen.main.bounds.size.width * 3 / 4)
+                .padding(.bottom)
             Text(step.name).font(.title).fontWeight(.bold).padding(.large)
             Text(step.desc).font(.title2).fontWeight(.bold).padding(.large)
             Divider().frame(height: 2).overlay(.gray).padding(.large)
@@ -94,7 +95,7 @@ struct VideoView: View {
             Image(step.info)
         }.alert("Check your network, please", isPresented: $showingAlert) {
             Button("OK", role: .cancel) { }
-        }
+        }.ignoresSafeArea()
 
     }
 }
