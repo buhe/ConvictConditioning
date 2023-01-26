@@ -15,3 +15,5 @@ Most men's fitness methods , not only to practice the muscles , leaving you invi
 
 > When we talk about health , we actually talking about will.
 >             - From Fitness coach teacher che highly recommended
+
+Who need it, please compile it by yourself. If you find it troublesome or want to support me, go to https://apps.apple.com/us/app/convict-conditioning-pro/id1661449971 , the price is 1.99 Dollar.
