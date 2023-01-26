@@ -65,6 +65,7 @@
 		3F7A8AB82956A39500DB4BE0 /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Convict-Conditioning-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FF87A4F29571EAE0036672A /* AutoRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +118,7 @@
 		3F19F8DE29558B34005C0558 /* Convict Conditioning Pro */ = {
 			isa = PBXGroup;
 			children = (
+				3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */,
 				3F7A8AB52956A2EF00DB4BE0 /* radar */,
 				3F19F8DF29558B34005C0558 /* Convict_Conditioning_ProApp.swift */,
 				3F19F8E129558B34005C0558 /* Persistence.swift */,
@@ -475,6 +477,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Convict-Conditioning-Pro-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -514,6 +517,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Convict-Conditioning-Pro-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
