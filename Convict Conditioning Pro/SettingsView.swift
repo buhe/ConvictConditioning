@@ -14,7 +14,7 @@ struct SettingsView: View {
                 Section(){
                     Button{
                         #if os(iOS)
-                        if let url = URL(string: "https://github.com/buhe/InvestmentDashboard/issues") {
+                        if let url = URL(string: "https://github.com/buhe/ConvictConditioning/blob/main/Support.md") {
                             UIApplication.shared.open(url)
                         }
                         #endif
@@ -24,11 +24,7 @@ struct SettingsView: View {
                         
                     }.buttonStyle(PlainButtonStyle())
                     Button{
-                        #if os(iOS)
-                        if let url = URL(string: "https://github.com/buhe/InvestmentDashboard/issues") {
-                            UIApplication.shared.open(url)
-                        }
-                        #endif
+                     
                     } label: {
                         
                         Text("Rate")
