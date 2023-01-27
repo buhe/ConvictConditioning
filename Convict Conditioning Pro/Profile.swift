@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Profile: View {
+    @Environment(\.colorScheme) private var colorScheme
+    
     var viewModel: ViewModel
     let tags = ["Pushup", "Squat", "Pullup", "Leg raise", "Bridge", "Handstand Pushup"]
     var chartView: some View {
@@ -30,9 +32,10 @@ struct Profile: View {
                             ZStack(alignment: .top){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[0])
+                                    .font(.caption)
                             }
                             Text("")
                                 
@@ -43,10 +46,11 @@ struct Profile: View {
                             ZStack(alignment: .topLeading){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[5])
                                     .padding(.horizontal)
+                                    .font(.caption)
                             }
                             
                             Text("")
@@ -55,10 +59,11 @@ struct Profile: View {
                             ZStack(alignment: .topTrailing){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[1])
                                     .padding(.horizontal)
+                                    .font(.caption)
                             }
                             
                         }
@@ -67,10 +72,11 @@ struct Profile: View {
                             ZStack(alignment: .leading){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[4])
                                     .padding(.horizontal)
+                                    .font(.caption)
                             }
                             
                             Text("")
@@ -80,10 +86,11 @@ struct Profile: View {
                             ZStack(alignment: .trailing){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[2])
                                     .padding(.horizontal)
+                                    .font(.caption)
                             }
                             
                         }
@@ -96,9 +103,10 @@ struct Profile: View {
                             ZStack(alignment: .center){
                                 
                                 Rectangle()
-                                    .fill(Color.white)
+                                    .fill(colorScheme == .light ? Color.white : .systemBackground)
                                     .frame(minHeight: rect.size.height / 4)
                                 Text(tags[3])
+                                    .font(.caption)
                             }
                             
                             Text("")
