@@ -22,6 +22,7 @@ struct ContentView: View {
 //    private var items: FetchedResults<Item>
     
     @State var showProfile = false
+    @State var showSetting = false
 
     var body: some View {
 //        NavigationView {
@@ -66,14 +67,28 @@ struct ContentView: View {
                     }
                 }
             }.toolbar {
-                Button {
-                    showProfile.toggle()
-                } label: {
-                    Label("Profile", systemImage: "person.circle")
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button {
+                        showProfile.toggle()
+                    } label: {
+                        Label("Profile", systemImage: "person.circle")
+                    }
                 }
-            }.sheet(isPresented: $showProfile) {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button {
+                        showSetting.toggle()
+                    } label: {
+                        Label("Setting", systemImage: "gear")
+                    }
+                }
+            }
+            .sheet(isPresented: $showProfile) {
                 Profile(viewModel: viewModel)
-            }.onAppear {
+            }
+            .sheet(isPresented: $showSetting) {
+                SettingsView()
+            }
+            .onAppear {
                 viewModel.top(itemMaps: Dictionary(grouping: items, by: { $0.type }))
             }
             
