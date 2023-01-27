@@ -27,42 +27,64 @@ struct Profile: View {
                                 
                                 .frame(minHeight: rect.size.height / 4)
                             
-                            
-                            Text(tags[0])
-                
-                                .frame(minHeight: rect.size.height / 4)
-                            
+                            ZStack(alignment: .top){
+                                
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[0])
+                            }
                             Text("")
                                 
                                 .frame(minHeight: rect.size.height / 4)
                         }
                         
                         GridRow {
-                            Text(tags[5])
+                            ZStack(alignment: .topLeading){
                                 
-                                .frame(minHeight: rect.size.height / 4)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[5])
+                                    .padding(.horizontal)
+                            }
                             
                             Text("")
                                 
                                 .frame(minHeight: rect.size.height / 4)
-                            Text(tags[1])
+                            ZStack(alignment: .topTrailing){
                                 
-                                .frame(minHeight: rect.size.height / 4)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[1])
+                                    .padding(.horizontal)
+                            }
                             
                         }
                         
                         GridRow {
-                            Text(tags[4])
+                            ZStack(alignment: .leading){
                                 
-                                .frame(minHeight: rect.size.height / 4)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[4])
+                                    .padding(.horizontal)
+                            }
                             
                             Text("")
                                 
                                 .frame(minHeight: rect.size.height / 4)
                             
-                            Text(tags[2])
+                            ZStack(alignment: .trailing){
                                 
-                                .frame(minHeight: rect.size.height / 4)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[2])
+                                    .padding(.horizontal)
+                            }
                             
                         }
                         
@@ -71,9 +93,13 @@ struct Profile: View {
                                 
                                 .frame(minHeight: rect.size.height / 4)
                             
-                            Text(tags[3])
+                            ZStack(alignment: .center){
                                 
-                                .frame(minHeight: rect.size.height / 4)
+                                Rectangle()
+                                    .fill(Color.white)
+                                    .frame(minHeight: rect.size.height / 4)
+                                Text(tags[3])
+                            }
                             
                             Text("")
                                 
