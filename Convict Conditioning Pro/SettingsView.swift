@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SettingsView: View {
+    @Environment(\.requestReview) var requestReview
+    
     var body: some View {
         NavigationStack {
             Form{
@@ -24,7 +27,7 @@ struct SettingsView: View {
                         
                     }.buttonStyle(PlainButtonStyle())
                     Button{
-                     
+                        requestReview()
                     } label: {
                         
                         Text("Rate")
