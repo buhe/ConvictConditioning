@@ -9,9 +9,83 @@ import SwiftUI
 
 struct Profile: View {
     var viewModel: ViewModel
+    let tags = ["Pushup", "Squat", "Pullup", "Leg raise", "Bridge", "Handstand Pushup"]
     var chartView: some View {
         VStack {
-            RadarChart(data: viewModel.tops.map { Double($0.step)}).padding(.vertical)
+            ZStack{
+//                VStack{
+//                    Text(tags[0])
+//                    Spacer()
+//                    Text(tags[3])
+//                }
+                GeometryReader{
+                    rect in
+                    
+                    Grid {
+                        GridRow {
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            
+                            Text(tags[0])
+                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                        }
+                        
+                        GridRow {
+                            Text(tags[5])
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            Text(tags[1])
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                        }
+                        
+                        GridRow {
+                            Text(tags[4])
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text(tags[2])
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                        }
+                        
+                        GridRow {
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text(tags[3])
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                            Text("")
+                                
+                                .frame(minHeight: rect.size.height / 4)
+                            
+                        }
+                    }
+                    
+                }
+                
+                RadarChart(data: viewModel.tops.map { Double($0.step)}).padding(.vertical)
+            }
             List {
                 ForEach(viewModel.tops) {
                     item in
