@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9112955A50D005C0558 /* ViewModel.swift */; };
 		3F19F9142955CB5D005C0558 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9132955CB5D005C0558 /* StepView.swift */; };
 		3F19F9162955CE40005C0558 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9152955CE40005C0558 /* VideoView.swift */; };
+		3F624E9F2A347BB1001FE9C8 /* LangChain in Frameworks */ = {isa = PBXBuildFile; productRef = 3F624E9E2A347BB1001FE9C8 /* LangChain */; };
 		3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8AB82956A39500DB4BE0 /* RadarView.swift */; };
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F624E9F2A347BB1001FE9C8 /* LangChain in Frameworks */,
 				3FF87A5329572A710036672A /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +108,7 @@
 				3F19F8F529558B35005C0558 /* Convict Conditioning ProTests */,
 				3F19F8FF29558B35005C0558 /* Convict Conditioning ProUITests */,
 				3F19F8DD29558B34005C0558 /* Products */,
+				3F624E9D2A347BB1001FE9C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +172,13 @@
 			path = "Convict Conditioning ProUITests";
 			sourceTree = "<group>";
 		};
+		3F624E9D2A347BB1001FE9C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F7A8AB52956A2EF00DB4BE0 /* radar */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 			name = "Convict Conditioning Pro";
 			packageProductDependencies = (
 				3FF87A5229572A710036672A /* SwiftUIX */,
+				3F624E9E2A347BB1001FE9C8 /* LangChain */,
 			);
 			productName = "Convict Conditioning Pro";
 			productReference = 3F19F8DC29558B34005C0558 /* Convict Conditioning Pro.app */;
@@ -244,7 +255,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					3F19F8DB29558B34005C0558 = {
 						CreatedOnToolsVersion = 14.2;
@@ -270,6 +281,8 @@
 			mainGroup = 3F19F8D329558B34005C0558;
 			packageReferences = (
 				3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				3FACB1252A344BE5001ABC74 /* XCLocalSwiftPackageReference "../langchain-swift" */,
+				3FA5A6162A347A0300BF8FD2 /* XCLocalSwiftPackageReference "../langchain-swift" */,
 			);
 			productRefGroup = 3F19F8DD29558B34005C0558 /* Products */;
 			projectDirPath = "";
@@ -396,9 +409,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -454,9 +469,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -480,6 +497,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Convict Conditioning Pro/Convict_Conditioning_Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Convict Conditioning Pro/Preview Content\"";
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -520,6 +538,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Convict Conditioning Pro/Convict_Conditioning_Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Convict Conditioning Pro/Preview Content\"";
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -559,6 +578,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -582,6 +602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -604,6 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -626,6 +648,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -683,6 +706,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		3FA5A6162A347A0300BF8FD2 /* XCLocalSwiftPackageReference "../langchain-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../langchain-swift";
+		};
+		3FACB1252A344BE5001ABC74 /* XCLocalSwiftPackageReference "../langchain-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../langchain-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -695,6 +729,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F624E9E2A347BB1001FE9C8 /* LangChain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FACB1252A344BE5001ABC74 /* XCLocalSwiftPackageReference "../langchain-swift" */;
+			productName = LangChain;
+		};
 		3FF87A5229572A710036672A /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */;

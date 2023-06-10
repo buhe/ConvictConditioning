@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import LangChain
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
@@ -23,7 +24,14 @@ struct ContentView: View {
     
     @State var showProfile = false
     @State var showSetting = false
-
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        let llm = OpenAI()
+        Task.init {
+            await llm.send(text: "hi")
+        }
+        
+    }
     var body: some View {
 //        NavigationView {
 //            List {
