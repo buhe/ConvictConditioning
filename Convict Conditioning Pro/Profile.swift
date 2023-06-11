@@ -10,7 +10,8 @@ import LangChain
 
 struct Profile: View {
     @Environment(\.colorScheme) private var colorScheme
-    @State var recommend = "hello"
+    @AppStorage(wrappedValue: "waiting...", "recommend") var recommend
+    @AppStorage(wrappedValue: "", "steps") var steps
     var viewModel: ViewModel
     let tags = ["Pushup", "Squat", "Pullup", "Leg raise", "Bridge", "Handstand Pushup"]
     var chartView: some View {
@@ -132,27 +133,34 @@ struct Profile: View {
                     
                 }
             }.listStyle(PlainListStyle())
-            
-            Text(recommend)
-                .onAppear{
-                    Task{
-                        let llm = OpenAI()
-                        var p = "There are 6 sports in total, which are " + tags.joined(separator: ",")
-                        p += ". My progress is: "
-                        for i in viewModel.tops {
-                            p += i.title
-                            p += "  to complete "
-                            p += String(i.step)
-                            p += " step,"
+            ScrollView{
+                Text(recommend)
+                    .onAppear{
+                        let steps = viewModel.tops.map{ String($0.step) }.joined()
+                        print("steps \(steps)")
+                        if self.steps != steps {
+                            self.steps = steps
+                            Task{
+                                let llm = OpenAI()
+                                var p = "There are 6 sports in total, which are " + tags.joined(separator: ",")
+                                p += ". My progress is: "
+                                for i in viewModel.tops {
+                                    p += i.title
+                                    p += "  to complete "
+                                    p += String(i.step)
+                                    p += " step,"
+                                }
+                                p += "What's next for the suggestion? Give me advice anyway. "
+                                print(p)
+                                let result = await llm.send(text: p)
+                                print(result)
+                                recommend = result
+                                
+                            }
                         }
-                        p += "What's next for the suggestion? Give me advice anyway. "
-                        print(p)
-                        let result = await llm.send(text: p)
-                        print(result)
-                        recommend = result
-                        
                     }
-                }
+                    .padding()
+            }
         }
         
     }
