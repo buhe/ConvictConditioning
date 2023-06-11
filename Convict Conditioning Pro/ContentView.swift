@@ -28,7 +28,8 @@ struct ContentView: View {
         self.viewModel = viewModel
         let llm = OpenAI()
         Task.init {
-            await llm.send(text: "hi")
+            let result = await llm.send(text: "hi")
+            print(result)
         }
         
     }
