@@ -145,7 +145,7 @@ struct Profile: View {
                             p += String(i.step)
                             p += " step,"
                         }
-                        p += "What's next for the suggestion?"
+                        p += "What's next for the suggestion? Give me advice anyway. "
                         print(p)
                         let result = await llm.send(text: p)
                         print(result)
