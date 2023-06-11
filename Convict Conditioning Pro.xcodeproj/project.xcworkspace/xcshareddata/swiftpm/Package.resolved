@@ -91,6 +91,15 @@
       }
     },
     {
+      "identity" : "swiftdotenv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NoahKamara/SwiftDotEnv",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b40ec701c721e4523f7c6f0b074a6d379e2cd469"
+      }
+    },
+    {
       "identity" : "swiftuix",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftUIX/SwiftUIX",
