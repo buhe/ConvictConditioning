@@ -100,5 +100,99 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FF490CA-550A-467D-96B5-B5269CC1AFE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Convict Conditioning Pro/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "212E94AC-BC9A-4BF3-B30D-D799C8CC6FDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/langchain-swift/vectorstores/Supabase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "similaritySearch(query:k:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "212E94AC-BC9A-4BF3-B30D-D799C8CC6FDD - c530d31eeced6442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for LangChain.Supabase.similaritySearch(query: Swift.String, k: Swift.Int) async -&gt; Swift.Array&lt;LangChain.MactchedModel&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/langchain-swift/vectorstores/Supabase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "212E94AC-BC9A-4BF3-B30D-D799C8CC6FDD - f632c874d8c8d535"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for LangChain.Supabase.similaritySearch(query: Swift.String, k: Swift.Int) async -&gt; Swift.Array&lt;LangChain.MactchedModel&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/langchain-swift/vectorstores/Supabase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "212E94AC-BC9A-4BF3-B30D-D799C8CC6FDD - 67053b791687a85c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for LangChain.Supabase.similaritySearch(query: Swift.String, k: Swift.Int) async -&gt; Swift.Array&lt;LangChain.MactchedModel&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/langchain-swift/vectorstores/Supabase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "212E94AC-BC9A-4BF3-B30D-D799C8CC6FDD - 5813f76bd5b34a5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for LangChain.Supabase.similaritySearch(query: Swift.String, k: Swift.Int) async -&gt; Swift.Array&lt;LangChain.MactchedModel&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/langchain-swift/vectorstores/Supabase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

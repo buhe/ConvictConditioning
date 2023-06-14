@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import LangChain
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
@@ -23,7 +24,18 @@ struct ContentView: View {
     
     @State var showProfile = false
     @State var showSetting = false
-
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        let e = OpenAIEmbeddings()
+        Task {
+//            let r = await e.embedQuery(text: "1234567890abchi")
+//            print("r: \(r.count)")
+            
+            let s = Supabase(embeddings: e)
+            await s.addTexts(texts: ["dog"])
+            let m = await s.similaritySearch(query: "cat", k: 1)
+        }
+    }
     var body: some View {
 //        NavigationView {
 //            List {
