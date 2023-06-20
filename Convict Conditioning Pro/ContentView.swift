@@ -35,8 +35,23 @@ struct ContentView: View {
 //            let m = await s.similaritySearch(query: "cat", k: 1)
 //        }
         
-        let s1 = String(format: PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).template, "dog" , "cat")
-        print(s1)
+//        let s1 = String(format: PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).template, "dog" , "cat")
+//        print(s1)
+//        let llm = OpenAI()
+//        Task {
+//            let reply = await llm.send(text: "hi", stops: ["\\nObservation: ", "\\n\\tObservation: "])
+//            print(reply)
+//            
+//            let chain = LLMChain(llm: llm)
+//            await chain.run(args: ["1", "2"])
+//        }
+        let p = MRKLOutputParser()
+        let inputString = """
+Action: the action to take, should be one of [%@]
+Action Input: the input to the action
+"""
+        let a = p.parse(text: inputString)
+        print(a)
     }
     var body: some View {
 //        NavigationView {
