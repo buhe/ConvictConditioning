@@ -35,9 +35,9 @@ struct ContentView: View {
 //            let m = await s.similaritySearch(query: "cat", k: 1)
 //        }
         
-//        let s1 = String(format: PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).template, "dog" , "cat")
+        let s1 = PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).format(args: [ "dog" , "cat"] )
 //        print(s1)
-//        let llm = OpenAI()
+        let llm = OpenAI()
 //        Task {
 //            let reply = await llm.send(text: "hi", stops: ["\\nObservation: ", "\\n\\tObservation: "])
 //            print(reply)
@@ -45,13 +45,39 @@ struct ContentView: View {
 //            let chain = LLMChain(llm: llm)
 //            await chain.run(args: ["1", "2"])
 //        }
-        let p = MRKLOutputParser()
-        let inputString = """
-Action: the action to take, should be one of [%@]
-Action Input: the input to the action
+//        let p = MRKLOutputParser()
+//        let inputString = """
+//Action: the action to take, should be one of [%@]
+//Action Input: the input to the action
+//"""
+//        let a = p.parse(text: inputString)
+//        print(a)
+        
+        
+        // scenario 2 - Chain
+        let template = """
+        You are a playwright. Given the title of play, it is your job to write a synopsis for that title.
+        Title: %@
+        Playwright: This is a synopsis for the above play:
 """
-        let a = p.parse(text: inputString)
-        print(a)
+        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
+        let str = prompt_template.format(args: ["123"])
+//        print(str)
+        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, parser: Nothing())
+//
+        let test_prompts = [
+            [
+                "title": "documentary about good video games that push the boundary of game design"
+            ],
+            ["title": "the phenomenon behind the remarkable speed of cheetahs"],
+            ["title": "the best in class mlops tooling"],
+        ]
+        Task {
+            let response = await synopsis_chain.apply(input_list: test_prompts)
+            print(response)
+            print(response.count)
+        }
+
     }
     var body: some View {
 //        NavigationView {
