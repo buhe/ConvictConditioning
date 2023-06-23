@@ -54,30 +54,35 @@ struct ContentView: View {
 //        print(a)
         
         
-        // scenario 2 - Chain
-        let template = """
-        You are a playwright. Given the title of play, it is your job to write a synopsis for that title.
-        Title: %@
-        Playwright: This is a synopsis for the above play:
-"""
-        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
-        let str = prompt_template.format(args: ["123"])
-//        print(str)
-        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, parser: Nothing())
-//
-        let test_prompts = [
-            [
-                "title": "documentary about good video games that push the boundary of game design"
-            ],
-            ["title": "the phenomenon behind the remarkable speed of cheetahs"],
-            ["title": "the best in class mlops tooling"],
-        ]
+//        // scenario 2 - Chain
+//        let template = """
+//        You are a playwright. Given the title of play, it is your job to write a synopsis for that title.
+//        Title: %@
+//        Playwright: This is a synopsis for the above play:
+//"""
+//        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
+//        let str = prompt_template.format(args: ["123"])
+////        print(str)
+//        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, parser: Nothing())
+////
+//        let test_prompts = [
+//            [
+//                "title": "documentary about good video games that push the boundary of game design"
+//            ],
+//            ["title": "the phenomenon behind the remarkable speed of cheetahs"],
+//            ["title": "the best in class mlops tooling"],
+//        ]
+//        Task {
+//            let response = await synopsis_chain.apply(input_list: test_prompts)
+//            print(response)
+//            print(response.count)
+//        }
+        
+        let agent = initialize_agent(llm: llm, tools: [WeatherTool()])
         Task {
-            let response = await synopsis_chain.apply(input_list: test_prompts)
-            print(response)
-            print(response.count)
+            let answer = await agent.run(args: "Query the weather of this week")
+            print(answer)
         }
-
     }
     var body: some View {
 //        NavigationView {
