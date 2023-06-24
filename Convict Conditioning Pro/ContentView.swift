@@ -35,9 +35,9 @@ struct ContentView: View {
 //            let m = await s.similaritySearch(query: "cat", k: 1)
 //        }
         
-        let s1 = PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).format(args: [ "dog" , "cat"] )
+//        let s1 = PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).format(args: [ "dog" , "cat"] )
 //        print(s1)
-        let llm = OpenAI()
+//        let llm = OpenAI()
 //        Task {
 //            let reply = await llm.send(text: "hi", stops: ["\\nObservation: ", "\\n\\tObservation: "])
 //            print(reply)
@@ -83,10 +83,29 @@ struct ContentView: View {
 //            let answer = await agent.run(args: "Query the weather of this week")
 //            print(answer)
 //        }
-        let name = "state_of_the_union.txt"
-        let loader = TextLoader(file_path: name)
-        let c = loader.load()
-        print(c)
+//        let name = "state_of_the_union.txt"
+//        let loader = TextLoader(file_path: name)
+//        let c = loader.load()
+//        print(c)
+        
+        let loader = TextLoader(file_path: "state_of_the_union.txt")
+        let documents = loader.load()
+        let text_splitter = CharacterTextSplitter(chunk_size: 1000, chunk_overlap: 0)
+ 
+        let embeddings = OpenAIEmbeddings()
+        let s = Supabase(embeddings: embeddings)
+        Task {
+            for text in documents {
+                let docs = text_splitter.split_text(text: text.page_content)
+                for doc in docs {
+                    await s.addText(text: doc)
+                }
+            }
+            
+            let m = await s.similaritySearch(query: "What did the president say about Ketanji Brown Jackson", k: 1)
+            print("Q:What did the president say about Ketanji Brown Jackson")
+            print("A:\(m)")
+        }
     }
     var body: some View {
 //        NavigationView {
