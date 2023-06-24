@@ -26,6 +26,7 @@
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
 		3F8406522983B66000BBA978 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8406512983B66000BBA978 /* SettingsView.swift */; };
+		3FA841302A468DD8009DC4B1 /* state_of_the_union.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */; };
 		3FC51F0E29A09D4000224109 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F0D29A09D4000224109 /* Ex.swift */; };
 		3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF87A4F29571EAE0036672A /* AutoRotate.swift */; };
 		3FF87A5329572A710036672A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF87A5229572A710036672A /* SwiftUIX */; };
@@ -72,6 +73,7 @@
 		3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Convict-Conditioning-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3F8406512983B66000BBA978 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = state_of_the_union.txt; sourceTree = "<group>"; };
 		3FC51F0D29A09D4000224109 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		3FF87A4F29571EAE0036672A /* AutoRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 		3F19F8DE29558B34005C0558 /* Convict Conditioning Pro */ = {
 			isa = PBXGroup;
 			children = (
+				3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */,
 				3F624EA02A35756E001FE9C8 /* env.txt */,
 				3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */,
 				3F7A8AB52956A2EF00DB4BE0 /* radar */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F624EA12A35756E001FE9C8 /* env.txt in Resources */,
+				3FA841302A468DD8009DC4B1 /* state_of_the_union.txt in Resources */,
 				3F19F8ED29558B35005C0558 /* Preview Assets.xcassets in Resources */,
 				3F19F8E929558B35005C0558 /* Assets.xcassets in Resources */,
 			);

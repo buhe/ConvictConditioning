@@ -78,11 +78,15 @@ struct ContentView: View {
 //            print(response.count)
 //        }
         
-        let agent = initialize_agent(llm: llm, tools: [WeatherTool()])
-        Task {
-            let answer = await agent.run(args: "Query the weather of this week")
-            print(answer)
-        }
+//        let agent = initialize_agent(llm: llm, tools: [WeatherTool()])
+//        Task {
+//            let answer = await agent.run(args: "Query the weather of this week")
+//            print(answer)
+//        }
+        let name = "state_of_the_union.txt"
+        let loader = TextLoader(file_path: name)
+        let c = loader.load()
+        print(c)
     }
     var body: some View {
 //        NavigationView {
