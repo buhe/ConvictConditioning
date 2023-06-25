@@ -385,5 +385,275 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DE20776-6A3E-4F29-BFAD-DB3B2BD93240"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "prep_inputs(inputs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1DE20776-6A3E-4F29-BFAD-DB3B2BD93240 - dfcc901576a1f969"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LangChain.DefaultChain.prep_inputs(inputs: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "1DE20776-6A3E-4F29-BFAD-DB3B2BD93240 - f37f308fb3ad73df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.Array&lt;Swift.String&gt;) -&gt; (Swift.String, Swift.String) in LangChain.DefaultChain.prep_inputs(inputs: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51A342AF-FD98-4BE5-A6DE-FF5287601EC8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/memory/Chat.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "load_memory_variables(inputs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51A342AF-FD98-4BE5-A6DE-FF5287601EC8 - bb60acfebbdb0a44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LangChain.ConversationBufferWindowMemory.load_memory_variables(inputs: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.Array&lt;Swift.String&gt;&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/memory/Chat.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "51A342AF-FD98-4BE5-A6DE-FF5287601EC8 - 4f12cc95737895ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (LangChain.BaseMessage) -&gt; Swift.String in LangChain.ConversationBufferWindowMemory.load_memory_variables(inputs: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.Array&lt;Swift.String&gt;&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/memory/Chat.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3981EE00-FA3E-4B8E-8EB6-3B697544923F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "prep_inputs(inputs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3981EE00-FA3E-4B8E-8EB6-3B697544923F - dfcc901576a1feab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LangChain.DefaultChain.prep_inputs(inputs: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "3981EE00-FA3E-4B8E-8EB6-3B697544923F - 1cbff019958afe00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String, Swift.String) -&gt; () in LangChain.DefaultChain.prep_inputs(inputs: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBE66ABF-2AE4-4AE9-A8BD-3A3AEFC3A114"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/BaseChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "prep_inputs(inputs:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0586520C-BB43-408F-8CB0-D53DA2DC8724"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "predict(args:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0586520C-BB43-408F-8CB0-D53DA2DC8724 - c6de54556996f62d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for LangChain.LLMChain.predict(args: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) async -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "0586520C-BB43-408F-8CB0-D53DA2DC8724 - 5455c1e288fac3f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for LangChain.LLMChain.predict(args: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) async -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "0586520C-BB43-408F-8CB0-D53DA2DC8724 - 7ee2a698a7af9253"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for LangChain.LLMChain.predict(args: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) async -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "0586520C-BB43-408F-8CB0-D53DA2DC8724 - 3dfbbc516bde621c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; Swift.String in LangChain.LLMChain.predict(args: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) async -&gt; Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D8D6018-3A2B-4BD2-B110-24F536C49C3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "generate(input_list:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8255D99F-C045-4D0C-9CAA-B8FFF0751E07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/chains/LLMChain.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "predict(args:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
