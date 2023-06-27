@@ -147,9 +147,9 @@ struct ContentView: View {
 //            let google = try! await google._run(args:"apple")
 //            print("google: \(google)")
 //        }
-        let agent = initialize_agent(llm: OpenAI(), tools: [Serper()])
+        let agent = initialize_agent(llm: OpenAI(), tools: [Serper(gl: "cn", hl: "zh")])
         Task {
-            let answer = await agent.run(args: "Query the weather of this week")
+            let answer = await agent.run(args: "沈阳二手房买卖，房产证几天出")
             print(answer)
         }
     }
