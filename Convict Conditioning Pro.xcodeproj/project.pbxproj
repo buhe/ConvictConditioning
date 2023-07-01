@@ -20,6 +20,8 @@
 		3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9112955A50D005C0558 /* ViewModel.swift */; };
 		3F19F9142955CB5D005C0558 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9132955CB5D005C0558 /* StepView.swift */; };
 		3F19F9162955CE40005C0558 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9152955CE40005C0558 /* VideoView.swift */; };
+		3F5618952A4D6F6900535A9E /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5618942A4D6F6900535A9E /* GoogleSignIn */; };
+		3F5618972A4D6F6900535A9E /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5618962A4D6F6900535A9E /* GoogleSignInSwift */; };
 		3F624E9F2A347BB1001FE9C8 /* LangChain in Frameworks */ = {isa = PBXBuildFile; productRef = 3F624E9E2A347BB1001FE9C8 /* LangChain */; };
 		3F624EA12A35756E001FE9C8 /* env.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F624EA02A35756E001FE9C8 /* env.txt */; };
 		3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8AB82956A39500DB4BE0 /* RadarView.swift */; };
@@ -85,6 +87,8 @@
 			files = (
 				3F624E9F2A347BB1001FE9C8 /* LangChain in Frameworks */,
 				3FF87A5329572A710036672A /* SwiftUIX in Frameworks */,
+				3F5618952A4D6F6900535A9E /* GoogleSignIn in Frameworks */,
+				3F5618972A4D6F6900535A9E /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +216,8 @@
 			packageProductDependencies = (
 				3FF87A5229572A710036672A /* SwiftUIX */,
 				3F624E9E2A347BB1001FE9C8 /* LangChain */,
+				3F5618942A4D6F6900535A9E /* GoogleSignIn */,
+				3F5618962A4D6F6900535A9E /* GoogleSignInSwift */,
 			);
 			productName = "Convict Conditioning Pro";
 			productReference = 3F19F8DC29558B34005C0558 /* Convict Conditioning Pro.app */;
@@ -289,6 +295,7 @@
 				3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				3FACB1252A344BE5001ABC74 /* XCLocalSwiftPackageReference "../langchain-swift" */,
 				3FA5A6162A347A0300BF8FD2 /* XCLocalSwiftPackageReference "../langchain-swift" */,
+				3F5618932A4D6F6900535A9E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 3F19F8DD29558B34005C0558 /* Products */;
 			projectDirPath = "";
@@ -726,6 +733,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F5618932A4D6F6900535A9E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -737,6 +752,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F5618942A4D6F6900535A9E /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5618932A4D6F6900535A9E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		3F5618962A4D6F6900535A9E /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5618932A4D6F6900535A9E /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		3F624E9E2A347BB1001FE9C8 /* LangChain */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3FACB1252A344BE5001ABC74 /* XCLocalSwiftPackageReference "../langchain-swift" */;
