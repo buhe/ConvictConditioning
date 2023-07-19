@@ -152,19 +152,37 @@ struct ContentView: View {
 //            let answer = await agent.run(args: "沈阳二手房买卖，房产证几天出")
 //            print(answer)
 //        }
-        let video_id = "JdM6AruIKT4"
-        let loader = YoutubeLoader(video_id: video_id, language: "zh")
+//        let video_id = "JdM6AruIKT4"
+//        let loader = YoutubeLoader(video_id: video_id, language: "zh")
+//        Task {
+//            let doc = await loader.load()
+//            let text_splitter = CharacterTextSplitter(chunk_size: 3000, chunk_overlap: 0)
+//        
+//            let texts = text_splitter.split_text(text: doc.first!.page_content)
+//            let _1 = texts.first!
+//            let prompt = PromptTemplate(input_variables: ["youtube"], template: """
+//以下是 youtube 一个视频的字幕 : %@ , 请总结主要内容, 要求在100个字以内.
+//""")
+//            let request = prompt.format(args: [_1])
+//            let llm = OpenAI()
+//            let reply = await llm.send(text: request)
+//            print(reply)
+//        }
+        let html = "<html><head><title>First parse</title></head>"
+               + "<body><p>你好，世界.</p></body></html>"
+        let loader = HtmlLoader(html: html, url: "")
         Task {
             let doc = await loader.load()
             let text_splitter = CharacterTextSplitter(chunk_size: 3000, chunk_overlap: 0)
         
             let texts = text_splitter.split_text(text: doc.first!.page_content)
             let _1 = texts.first!
-            let prompt = PromptTemplate(input_variables: ["youtube"], template: """
-以下是 youtube 一个视频的字幕 : %@ , 请总结主要内容, 要求在100个字以内.
+            let prompt = PromptTemplate(input_variables: ["h", "url"], template: """
+以下是一个网页内容 : %@ , 请总结主要内容, 要求在100个字以内.
 """)
             let request = prompt.format(args: [_1])
             let llm = OpenAI()
+            print(request)
             let reply = await llm.send(text: request)
             print(reply)
         }
