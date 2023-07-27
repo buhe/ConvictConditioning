@@ -168,8 +168,8 @@ struct ContentView: View {
 //            let reply = await llm.send(text: request)
 //            print(reply)
 //        }
-        let html = "<html><head><title>First parse</title></head>"
-               + "<body><p>你好，世界.</p></body></html>"
+        let html = "<html><head><title></title></head>"
+               + "<body><p>你好</p></body></html>"
         let loader = HtmlLoader(html: html, url: "")
         Task {
             let doc = await loader.load()
@@ -178,10 +178,10 @@ struct ContentView: View {
             let texts = text_splitter.split_text(text: doc.first!.page_content)
             let _1 = texts.first!
             let prompt = PromptTemplate(input_variables: ["h", "url"], template: """
-以下是一个网页内容 : %@ , 请总结主要内容, 要求在100个字以内.
+%@
 """)
             let request = prompt.format(args: [_1])
-            let llm = OpenAI()
+            let llm = HuggingFace(repo: "bigscience/bloomz-1b1")
             print(request)
             let reply = await llm.send(text: request)
             print(reply)
