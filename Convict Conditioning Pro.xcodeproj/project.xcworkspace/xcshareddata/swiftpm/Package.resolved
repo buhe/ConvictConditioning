@@ -55,15 +55,6 @@
       }
     },
     {
-      "identity" : "langchain-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/buhe/langchain-swift",
-      "state" : {
-        "revision" : "10f79427d30e80cd47e2bbf24a0139dbad642325",
-        "version" : "0.9.0"
-      }
-    },
-    {
       "identity" : "openai-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dylanshine/openai-kit",

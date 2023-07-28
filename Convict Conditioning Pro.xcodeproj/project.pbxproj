@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,11 +25,12 @@
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
 		3F8406522983B66000BBA978 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8406512983B66000BBA978 /* SettingsView.swift */; };
+		3F84EAAF2A73F17C00A25923 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3F84EAAE2A73F17C00A25923 /* sample.pdf */; };
+		3F84EAB22A73F1C800A25923 /* LangChain in Frameworks */ = {isa = PBXBuildFile; productRef = 3F84EAB12A73F1C800A25923 /* LangChain */; };
 		3FA841302A468DD8009DC4B1 /* state_of_the_union.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */; };
 		3FC51F0E29A09D4000224109 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51F0D29A09D4000224109 /* Ex.swift */; };
 		3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF87A4F29571EAE0036672A /* AutoRotate.swift */; };
 		3FF87A5329572A710036672A /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3FF87A5229572A710036672A /* SwiftUIX */; };
-		3FFF01952A7385E200ED0B95 /* LangChain in Frameworks */ = {isa = PBXBuildFile; productRef = 3FFF01942A7385E200ED0B95 /* LangChain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Convict-Conditioning-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3F8406512983B66000BBA978 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3F84EAAE2A73F17C00A25923 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = state_of_the_union.txt; sourceTree = "<group>"; };
 		3FC51F0D29A09D4000224109 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		3FF87A4F29571EAE0036672A /* AutoRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRotate.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFF01952A7385E200ED0B95 /* LangChain in Frameworks */,
+				3F84EAB22A73F1C800A25923 /* LangChain in Frameworks */,
 				3FF87A5329572A710036672A /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +134,7 @@
 				3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */,
 				3F624EA02A35756E001FE9C8 /* env.txt */,
 				3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */,
+				3F84EAAE2A73F17C00A25923 /* sample.pdf */,
 				3F7A8AB52956A2EF00DB4BE0 /* radar */,
 				3F19F8DF29558B34005C0558 /* Convict_Conditioning_ProApp.swift */,
 				3F19F8E129558B34005C0558 /* Persistence.swift */,
@@ -211,7 +214,7 @@
 			name = "Convict Conditioning Pro";
 			packageProductDependencies = (
 				3FF87A5229572A710036672A /* SwiftUIX */,
-				3FFF01942A7385E200ED0B95 /* LangChain */,
+				3F84EAB12A73F1C800A25923 /* LangChain */,
 			);
 			productName = "Convict Conditioning Pro";
 			productReference = 3F19F8DC29558B34005C0558 /* Convict Conditioning Pro.app */;
@@ -287,7 +290,7 @@
 			mainGroup = 3F19F8D329558B34005C0558;
 			packageReferences = (
 				3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */,
-				3FFF01932A7385E200ED0B95 /* XCRemoteSwiftPackageReference "langchain-swift" */,
+				3F84EAB02A73F1C800A25923 /* XCLocalSwiftPackageReference "../langchain-swift" */,
 			);
 			productRefGroup = 3F19F8DD29558B34005C0558 /* Products */;
 			projectDirPath = "";
@@ -309,6 +312,7 @@
 				3FA841302A468DD8009DC4B1 /* state_of_the_union.txt in Resources */,
 				3F19F8ED29558B35005C0558 /* Preview Assets.xcassets in Resources */,
 				3F19F8E929558B35005C0558 /* Assets.xcassets in Resources */,
+				3F84EAAF2A73F17C00A25923 /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +717,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		3F84EAB02A73F1C800A25923 /* XCLocalSwiftPackageReference "../langchain-swift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../langchain-swift";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -722,26 +733,17 @@
 				kind = branch;
 			};
 		};
-		3FFF01932A7385E200ED0B95 /* XCRemoteSwiftPackageReference "langchain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/buhe/langchain-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F84EAB12A73F1C800A25923 /* LangChain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LangChain;
+		};
 		3FF87A5229572A710036672A /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3FF87A5129572A710036672A /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
-		};
-		3FFF01942A7385E200ED0B95 /* LangChain */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3FFF01932A7385E200ED0B95 /* XCRemoteSwiftPackageReference "langchain-swift" */;
-			productName = LangChain;
 		};
 /* End XCSwiftPackageProductDependency section */
 

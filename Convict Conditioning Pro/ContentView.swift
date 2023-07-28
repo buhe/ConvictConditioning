@@ -186,6 +186,25 @@ struct ContentView: View {
 //            let reply = await llm.send(text: request)
 //            print(reply)
 //        }
+        if let url = Bundle.main.url(forResource: "sample", withExtension: "pdf") {
+            let loader = PDFLoader(fileURL: url)
+            Task {
+               let doc = await loader.load()
+//               let text_splitter = CharacterTextSplitter(chunk_size: 3000, chunk_overlap: 0)
+//   
+//               let texts = text_splitter.split_text(text: doc.first!.page_content)
+//               let _1 = texts.first!
+               let prompt = PromptTemplate(input_variables: [], template: """
+   这是一个 pdf 文件的内容 %@，尝试总结它
+   """)
+               let request = prompt.format(args: [doc.first!.page_content])
+               let llm = OpenAI()
+               print(request)
+               let reply = await llm.send(text: request)
+               print(reply)
+           }
+        }
+        
     }
     var body: some View {
 //        NavigationView {
