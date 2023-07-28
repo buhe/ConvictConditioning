@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "appauth-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/openid/AppAuth-iOS.git",
-      "state" : {
-        "revision" : "71cde449f13d453227e687458144bde372d30fc7",
-        "version" : "1.6.2"
-      }
-    },
-    {
       "identity" : "async-http-client",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/async-http-client.git",
@@ -46,39 +37,12 @@
       }
     },
     {
-      "identity" : "googlesignin-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/google/GoogleSignIn-iOS",
-      "state" : {
-        "revision" : "7932d33686c1dc4d7df7a919aae47361d1cdfda4",
-        "version" : "7.0.0"
-      }
-    },
-    {
       "identity" : "gotrue-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/gotrue-swift",
       "state" : {
-        "revision" : "a972c99bf0ed745047ec7bc6231460f6738d004e",
-        "version" : "1.1.1"
-      }
-    },
-    {
-      "identity" : "gtm-session-fetcher",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/google/gtm-session-fetcher.git",
-      "state" : {
-        "revision" : "d415594121c9e8a4f9d79cecee0965cf35e74dbd",
-        "version" : "3.1.1"
-      }
-    },
-    {
-      "identity" : "gtmappauth",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/google/GTMAppAuth.git",
-      "state" : {
-        "revision" : "cee3c709307912d040bd1e06ca919875a92339c6",
-        "version" : "2.0.0"
+        "revision" : "4bf132d73d322ee5d6d648f02deb9f2bc19cc659",
+        "version" : "1.2.1"
       }
     },
     {
@@ -91,12 +55,21 @@
       }
     },
     {
+      "identity" : "langchain-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/buhe/langchain-swift",
+      "state" : {
+        "revision" : "10f79427d30e80cd47e2bbf24a0139dbad642325",
+        "version" : "0.9.0"
+      }
+    },
+    {
       "identity" : "openai-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/dylanshine/openai-kit",
       "state" : {
-        "revision" : "71c0e10d07f18ea16e958f5621c9d62eb8ade972",
-        "version" : "1.8.0"
+        "revision" : "bf4e81668fe3c561afa29078121f3ff7d99da210",
+        "version" : "1.8.2"
       }
     },
     {
@@ -104,8 +77,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/postgrest-swift",
       "state" : {
-        "revision" : "a3c2d6a2ede94d2529edf063b056b1a66fd9cdc2",
-        "version" : "1.0.0"
+        "revision" : "fb91f56ffcfe829c0cba2bfc180b1e669a8dd2e4",
+        "version" : "1.0.1"
       }
     },
     {
@@ -131,8 +104,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/supabase-swift",
       "state" : {
-        "revision" : "c5d5e3eb7b8db485494949ecdfa9eef126cfa947",
-        "version" : "0.2.1"
+        "revision" : "7088b85247c8e56317f0b22b9d60655e8f762fec",
+        "version" : "0.3.0"
       }
     },
     {
@@ -167,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "6213ba7a06febe8fef60563a4a7d26a4085783cf",
-        "version" : "2.54.0"
+        "revision" : "a2e487b77f17edbce9a65f2b7415f2f479dc8e48",
+        "version" : "2.57.0"
       }
     },
     {
