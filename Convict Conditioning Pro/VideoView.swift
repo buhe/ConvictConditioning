@@ -81,7 +81,7 @@ struct VideoView: View {
                 }
             }
             
-            CacheManager.shared.getFileWith(stringUrl: Model.VIDEO_PREFIX + step.videoName) { result in
+            CacheManager.shared.getFileWith(stringUrl: CCModel.VIDEO_PREFIX + step.videoName) { result in
                             switch result {
                             case .success(let url):
                                 self.player = AutoRotate(url: url)
@@ -103,8 +103,8 @@ struct VideoView: View {
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView(step: Model().steps["Pushup"]!.first!).preferredColorScheme(.light)
+        VideoView(step: CCModel().steps["Pushup"]!.first!).preferredColorScheme(.light)
         
-        VideoView(step: Model().steps["Pushup"]!.first!).preferredColorScheme(.dark)
+        VideoView(step: CCModel().steps["Pushup"]!.first!).preferredColorScheme(.dark)
     }
 }

@@ -16,11 +16,16 @@
 		3F19F8F729558B35005C0558 /* Convict_Conditioning_ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F8F629558B35005C0558 /* Convict_Conditioning_ProTests.swift */; };
 		3F19F90129558B35005C0558 /* Convict_Conditioning_ProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90029558B35005C0558 /* Convict_Conditioning_ProUITests.swift */; };
 		3F19F90329558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90229558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift */; };
-		3F19F9102955A4ED005C0558 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90F2955A4ED005C0558 /* Model.swift */; };
+		3F19F9102955A4ED005C0558 /* CCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F90F2955A4ED005C0558 /* CCModel.swift */; };
 		3F19F9122955A50D005C0558 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9112955A50D005C0558 /* ViewModel.swift */; };
 		3F19F9142955CB5D005C0558 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9132955CB5D005C0558 /* StepView.swift */; };
 		3F19F9162955CE40005C0558 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F19F9152955CE40005C0558 /* VideoView.swift */; };
+		3F2762E12AA4A41B00127F58 /* audio3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F2762E02AA4A41B00127F58 /* audio3.m4a */; };
+		3F2762E32AA4A52500127F58 /* audio2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F2762E22AA4A52500127F58 /* audio2.m4a */; };
+		3F533E572AA807B8006CE2B5 /* ocr.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F533E562AA807B8006CE2B5 /* ocr.png */; };
+		3F533E592AA80CD6006CE2B5 /* ocr2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F533E582AA80CD6006CE2B5 /* ocr2.png */; };
 		3F624EA12A35756E001FE9C8 /* env.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F624EA02A35756E001FE9C8 /* env.txt */; };
+		3F716F3B2AA497F400C0DB8C /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F716F3A2AA497F400C0DB8C /* audio.mp3 */; };
 		3F7A8AB92956A39500DB4BE0 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8AB82956A39500DB4BE0 /* RadarView.swift */; };
 		3F7A8ABD2956AAE400DB4BE0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */; };
 		3F7A8ABF2956C12D00DB4BE0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */; };
@@ -64,11 +69,17 @@
 		3F19F8FC29558B35005C0558 /* Convict Conditioning ProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Convict Conditioning ProUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F19F90029558B35005C0558 /* Convict_Conditioning_ProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convict_Conditioning_ProUITests.swift; sourceTree = "<group>"; };
 		3F19F90229558B35005C0558 /* Convict_Conditioning_ProUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convict_Conditioning_ProUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3F19F90F2955A4ED005C0558 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3F19F90F2955A4ED005C0558 /* CCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCModel.swift; sourceTree = "<group>"; };
 		3F19F9112955A50D005C0558 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3F19F9132955CB5D005C0558 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		3F19F9152955CE40005C0558 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		3F2762E02AA4A41B00127F58 /* audio3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio3.m4a; sourceTree = "<group>"; };
+		3F2762E22AA4A52500127F58 /* audio2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio2.m4a; sourceTree = "<group>"; };
+		3F533E562AA807B8006CE2B5 /* ocr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocr.png; sourceTree = "<group>"; };
+		3F533E582AA80CD6006CE2B5 /* ocr2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocr2.png; sourceTree = "<group>"; };
 		3F624EA02A35756E001FE9C8 /* env.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = env.txt; sourceTree = "<group>"; };
+		3F716F3A2AA497F400C0DB8C /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		3F716F3E2AA49E3500C0DB8C /* audio1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = audio1.m4a; sourceTree = "<group>"; };
 		3F7A8AB82956A39500DB4BE0 /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		3F7A8ABC2956AAE400DB4BE0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3F7A8ABE2956C12D00DB4BE0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -131,10 +142,16 @@
 		3F19F8DE29558B34005C0558 /* Convict Conditioning Pro */ = {
 			isa = PBXGroup;
 			children = (
+				3F716F3A2AA497F400C0DB8C /* audio.mp3 */,
+				3F716F3E2AA49E3500C0DB8C /* audio1.m4a */,
 				3FA8412F2A468DD8009DC4B1 /* state_of_the_union.txt */,
+				3F2762E22AA4A52500127F58 /* audio2.m4a */,
+				3F2762E02AA4A41B00127F58 /* audio3.m4a */,
+				3F533E562AA807B8006CE2B5 /* ocr.png */,
 				3F624EA02A35756E001FE9C8 /* env.txt */,
 				3F84064E29827CDF00BBA978 /* Convict-Conditioning-Pro-Info.plist */,
 				3F84EAAE2A73F17C00A25923 /* sample.pdf */,
+				3F533E582AA80CD6006CE2B5 /* ocr2.png */,
 				3F7A8AB52956A2EF00DB4BE0 /* radar */,
 				3F19F8DF29558B34005C0558 /* Convict_Conditioning_ProApp.swift */,
 				3F19F8E129558B34005C0558 /* Persistence.swift */,
@@ -143,7 +160,7 @@
 				3F19F8EA29558B35005C0558 /* Convict_Conditioning_Pro.entitlements */,
 				3F19F8E329558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld */,
 				3F19F8EB29558B35005C0558 /* Preview Content */,
-				3F19F90F2955A4ED005C0558 /* Model.swift */,
+				3F19F90F2955A4ED005C0558 /* CCModel.swift */,
 				3F19F9112955A50D005C0558 /* ViewModel.swift */,
 				3F19F9132955CB5D005C0558 /* StepView.swift */,
 				3F19F9152955CE40005C0558 /* VideoView.swift */,
@@ -311,7 +328,12 @@
 				3F624EA12A35756E001FE9C8 /* env.txt in Resources */,
 				3FA841302A468DD8009DC4B1 /* state_of_the_union.txt in Resources */,
 				3F19F8ED29558B35005C0558 /* Preview Assets.xcassets in Resources */,
+				3F716F3B2AA497F400C0DB8C /* audio.mp3 in Resources */,
 				3F19F8E929558B35005C0558 /* Assets.xcassets in Resources */,
+				3F2762E12AA4A41B00127F58 /* audio3.m4a in Resources */,
+				3F533E592AA80CD6006CE2B5 /* ocr2.png in Resources */,
+				3F2762E32AA4A52500127F58 /* audio2.m4a in Resources */,
+				3F533E572AA807B8006CE2B5 /* ocr.png in Resources */,
 				3F84EAAF2A73F17C00A25923 /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F19F9102955A4ED005C0558 /* Model.swift in Sources */,
+				3F19F9102955A4ED005C0558 /* CCModel.swift in Sources */,
 				3F19F8E029558B34005C0558 /* Convict_Conditioning_ProApp.swift in Sources */,
 				3F19F8E529558B34005C0558 /* Convict_Conditioning_Pro.xcdatamodeld in Sources */,
 				3FF87A5029571EAE0036672A /* AutoRotate.swift in Sources */,

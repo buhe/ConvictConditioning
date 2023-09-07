@@ -154,7 +154,7 @@ struct Profile: View {
                                 print(p)
                                 let result = await llm.send(text: p)
                                 print(result)
-                                recommend = result
+                                recommend = result.llm_output!
                                 
                             }
                         }

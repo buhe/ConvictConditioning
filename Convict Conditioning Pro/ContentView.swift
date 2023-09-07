@@ -8,6 +8,19 @@
 import SwiftUI
 import CoreData
 import LangChain
+import Foundation
+import NIOPosix
+import AsyncHTTPClient
+import OpenAIKit
+
+struct Unit: Codable {
+    let num: Int
+}
+struct Book: Codable {
+    let title: String
+    let content: String
+    let unit: Unit
+}
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
@@ -37,7 +50,7 @@ struct ContentView: View {
         
 //        let s1 = PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).format(args: [ "dog" , "cat"] )
 //        print(s1)
-//        let llm = OpenAI()
+        let llm = OpenAI()
 //        Task {
 //            let reply = await llm.send(text: "hi", stops: ["\\nObservation: ", "\\n\\tObservation: "])
 //            print(reply)
@@ -63,7 +76,7 @@ struct ContentView: View {
 //        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
 //        let str = prompt_template.format(args: ["123"])
 ////        print(str)
-//        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, parser: Nothing())
+//        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template)
 ////
 //        let test_prompts = [
 //            [
@@ -77,11 +90,11 @@ struct ContentView: View {
 //            print(response)
 //            print(response.count)
 //        }
-        
+//        
 //        let agent = initialize_agent(llm: llm, tools: [WeatherTool()])
 //        Task {
 //            let answer = await agent.run(args: "Query the weather of this week")
-//            print(answer)
+//            print(answer.llm_output!)
 //        }
 //        let name = "state_of_the_union.txt"
 //        let loader = TextLoader(file_path: name)
@@ -128,7 +141,6 @@ struct ContentView: View {
 //        let chatgpt_chain = LLMChain(
 //            llm: OpenAI(),
 //            prompt: prompt,
-//            parser: Nothing(),
 //            memory: ConversationBufferWindowMemory()
 //        )
 //        Task {
@@ -164,7 +176,11 @@ struct ContentView: View {
 //以下是 youtube 一个视频的字幕 : %@ , 请总结主要内容, 要求在100个字以内.
 //""")
 //            let request = prompt.format(args: [_1])
-//            let llm = OpenAI()
+//        let llm = OpenAI(model: Model.GPT4.gpt4)
+//        Task {
+//            let r = await llm.send(text: "hi")
+//            print("result: \(r)")
+//        }
 //            let reply = await llm.send(text: request)
 //            print(reply)
 //        }
@@ -186,25 +202,123 @@ struct ContentView: View {
 //            let reply = await llm.send(text: request)
 //            print(reply)
 //        }
-        if let url = Bundle.main.url(forResource: "sample", withExtension: "pdf") {
-            let loader = PDFLoader(fileURL: url)
-            Task {
-               let doc = await loader.load()
-//               let text_splitter = CharacterTextSplitter(chunk_size: 3000, chunk_overlap: 0)
-//   
-//               let texts = text_splitter.split_text(text: doc.first!.page_content)
-//               let _1 = texts.first!
-               let prompt = PromptTemplate(input_variables: [], template: """
-   这是一个 pdf 文件的内容 %@，尝试总结它
-   """)
-               let request = prompt.format(args: [doc.first!.page_content])
-               let llm = OpenAI()
-               print(request)
-               let reply = await llm.send(text: request)
-               print(reply)
-           }
-        }
+//        if let url = Bundle.main.url(forResource: "sample", withExtension: "pdf") {
+//            let loader = PDFLoader(fileURL: url)
+//            Task {
+//               let doc = await loader.load()
+////               let text_splitter = CharacterTextSplitter(chunk_size: 3000, chunk_overlap: 0)
+////   
+////               let texts = text_splitter.split_text(text: doc.first!.page_content)
+////               let _1 = texts.first!
+//               let prompt = PromptTemplate(input_variables: [], template: """
+//   这是一个 pdf 文件的内容 %@，尝试总结它
+//   """)
+//               let request = prompt.format(args: [doc.first!.page_content])
+//               let llm = OpenAI()
+//               print(request)
+//               let reply = await llm.send(text: request)
+//               print(reply)
+//           }
+//        }
+//        Task {
+//            let llm = Dalle(size: .fiveTwelve)
+//            let url = await llm.send(text: "an icon of a paper plane in light blue metallic iridescent material, 3D render isometric perspective on dark background")
+//            print("image url: \(url)")
+//        }
+//        Task {
+//            let js = JavascriptREPLTool()
+//            let result = try await js._run(args: "1 + 2 ")
+//            print("result: \(result)")
+//        }
+//        let demo = Book(title: "a", content: "b", unit: Unit(num: 1))
+//        
+//        var p = ObjectOutputParser(demo: demo)
+//        
+//        let llm = OpenAI()
+//        
+//        let t = PromptTemplate(input_variables: [], template: "Answer the user query.\n" + p.get_format_instructions() + "\n%@")
+//        
+//        let chain = LLMChain(llm: llm, prompt: t, parser: p)
+//        Task {
+//            let pasred = await chain.predict_and_parse(args: ["text": "The book title is 123 , content is 456 , num of unit is 7"])
+//            switch pasred {
+//            case Parsed.object(let o): print("object: \(o)")
+//            default: break
+//            }
+//        }
         
+//        let glm = ChatGLM(model: .chatglm_lite, temperature: 0.8)
+//        Task {
+//            let r = await glm.send(text: "你好", stops: [])
+//            print("result: \(r)")
+//        }
+        
+        
+       
+        
+//        Task {
+//            let eventLoopGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+//
+//            let httpClient = HTTPClient(eventLoopGroupProvider: .shared(eventLoopGroup))
+//            let chat = ChatOpenAI(httpClient: httpClient, temperature: 0.9)
+//            defer {
+//                // it's important to shutdown the httpClient after all requests are done, even if one failed. See: https://github.com/swift-server/async-http-client
+//                try? httpClient.syncShutdown()
+//            }
+//            let r = await chat.send(text: "以春眠不觉晓为主题写一篇500字的文章")
+////            let r = await chat.straem(text: "以春眠不觉晓为主题写一篇500字的文章")
+//            
+//            for try await c in r.generation! {
+//                if let message = c.choices.first?.delta.content {
+//                    print("-- \(message)")
+//                }
+//            }
+//            print("done")
+//        }
+//        if let url = Bundle.main.url(forResource: "audio", withExtension: "mp3") {
+//            let audio = AudioLoader(audio: url, fileName: "audio3.m4a")
+//            Task {
+//                let docs = await audio.load()
+//                print(docs.count)
+//                print(docs[3].page_content)
+//            }
+    //        }
+//        let loader = TextLoader(file_path: "state_of_the_union.txt")
+//        let documents = loader.load()
+//        let text_splitter = CharacterTextSplitter(chunk_size: 1000, chunk_overlap: 0)
+//        let embeddings = OpenAIEmbeddings()
+//        let s = SupabaseByUser(embeddings: embeddings)
+//        let user_id = UUID().uuidString
+//       Task {
+//           for text in documents {
+//               let docs = text_splitter.split_text(text: text.page_content)
+//               for doc in docs {
+//                   await s.addText(text: doc, user_id: user_id)
+//               }
+//           }
+//
+//           let m = await s.similaritySearch(query: "What did the president say about Ketanji Brown Jackson", k: 1, user_id: user_id)
+//           print("Q:What did the president say about Ketanji Brown Jackson")
+//           print("A:\(m)")
+//       }
+        
+//        let baidu = Baidu()
+//        Task {
+//            let llmResult = await baidu.send(text: "你好")
+//            print("llm: \(llmResult.llm_output!)")
+//        }
+        if let imagePath = Bundle.main.path(forResource: "ocr2", ofType: "png") {
+            if let image = UIImage(contentsOfFile: imagePath) {
+                if let data = image.pngData() {
+                    let ocrLoader = ImageOCRLoader(image: data)
+                    Task {
+                        let docs = await ocrLoader.load()
+                        print("ocr: \(docs.first!.page_content)")
+                    }
+                }
+            }
+            
+        }
     }
     var body: some View {
 //        NavigationView {

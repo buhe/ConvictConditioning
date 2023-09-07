@@ -38,7 +38,7 @@ struct StepView: View {
 
 struct StepView_Previews: PreviewProvider {
     static var previews: some View {
-        StepView(steps: Model().steps["Pushup"]!, title: "Pushup")
-        StepView(steps: Model().steps["Pushup"]!, title: "Pushup").preferredColorScheme(.dark)
+        StepView(steps: CCModel().steps["Pushup"]!, title: "Pushup")
+        StepView(steps: CCModel().steps["Pushup"]!, title: "Pushup").preferredColorScheme(.dark)
     }
 }

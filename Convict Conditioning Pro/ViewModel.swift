@@ -8,7 +8,7 @@
 import Foundation
 
 class ViewModel: ObservableObject {
-    @Published var model = Model()
+    @Published var model = CCModel()
     @Published var tops = [
         TopItem(title: "Pushup", image: "a", type: 1),
         TopItem(title: "Squat", image: "b", type: 2),
