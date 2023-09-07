@@ -68,28 +68,28 @@ struct ContentView: View {
         
         
         // scenario 2 - Chain
-        let template = """
-        You are a playwright. Given the title of play, it is your job to write a synopsis for that title.
-        Title: %@
-        Playwright: This is a synopsis for the above play:
-"""
-        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
-//        let str = prompt_template.format(args: ["123"])
-//        print(str)
-        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, callbacks: [StdOutCallbackHandler()])
-//
-        let test_prompts = ["documentary about good video games that push the boundary of game design"]
-        Task {
-            let _ = await synopsis_chain.apply(input_list: test_prompts)
-//            print(response)
-//            print(response.count)
-        }
-//        
-//        let agent = initialize_agent(llm: llm, tools: [WeatherTool()])
+//        let template = """
+//        You are a playwright. Given the title of play, it is your job to write a synopsis for that title.
+//        Title: %@
+//        Playwright: This is a synopsis for the above play:
+//"""
+//        let prompt_template = PromptTemplate(input_variables: ["title"], template: template)
+////        let str = prompt_template.format(args: ["123"])
+////        print(str)
+//        let synopsis_chain = LLMChain(llm: llm, prompt: prompt_template, callbacks: [StdOutCallbackHandler()])
+////
+//        let test_prompts = ["documentary about good video games that push the boundary of game design"]
 //        Task {
-//            let answer = await agent.run(args: "Query the weather of this week")
-//            print(answer.llm_output!)
+//            let _ = await synopsis_chain.apply(input_list: test_prompts)
+////            print(response)
+////            print(response.count)
 //        }
+//        
+        let agent = initialize_agent(llm: llm, tools: [WeatherTool(callbacks: [StdOutCallbackHandler()])])
+        Task {
+            let answer = await agent.run(args: "Query the weather of this week")
+            print(answer.llm_output!)
+        }
 //        let name = "state_of_the_union.txt"
 //        let loader = TextLoader(file_path: name)
 //        let c = loader.load()
