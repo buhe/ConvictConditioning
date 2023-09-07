@@ -80,8 +80,8 @@ struct ContentView: View {
 //
         let test_prompts = ["documentary about good video games that push the boundary of game design"]
         Task {
-            let response = await synopsis_chain.apply(input_list: test_prompts)
-            print(response)
+            let _ = await synopsis_chain.apply(input_list: test_prompts)
+//            print(response)
 //            print(response.count)
         }
 //        
