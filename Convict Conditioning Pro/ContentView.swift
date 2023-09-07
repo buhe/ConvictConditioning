@@ -85,7 +85,7 @@ struct ContentView: View {
 ////            print(response.count)
 //        }
 //        
-        let agent = initialize_agent(llm: llm, tools: [WeatherTool(callbacks: [StdOutCallbackHandler()])])
+        let agent = initialize_agent(llm: llm, tools: [WeatherTool(callbacks: [StdOutCallbackHandler()])], callbacks: [StdOutCallbackHandler()])
         Task {
             let answer = await agent.run(args: "Query the weather of this week")
             print(answer.llm_output!)
