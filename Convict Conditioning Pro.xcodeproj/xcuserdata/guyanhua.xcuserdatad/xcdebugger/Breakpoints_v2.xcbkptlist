@@ -697,8 +697,8 @@
             filePath = "../langchain-swift/Sources/LangChain/utilities/GoogleSerperAPIWrapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "_google_serper_api_results(search_term:search_type:k:gl:hl:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -775,8 +775,8 @@
             filePath = "../langchain-swift/Sources/LangChain/utilities/GoogleSerperAPIWrapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "_google_serper_api_results(search_term:search_type:k:gl:hl:)"
             landmarkType = "7">
             <Locations>
@@ -1003,8 +1003,8 @@
             filePath = "../langchain-swift/Sources/LangChain/utilities/GoogleSerperAPIWrapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "_google_serper_api_results(search_term:search_type:k:gl:hl:)"
             landmarkType = "7">
             <Locations>
@@ -1272,6 +1272,36 @@
                   startingLineNumber = "30"
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "435432BE-1866-4E7A-A85E-64FD494D92D7 - 80e5b2cc810814bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for OpenAIKit.NIORequestHandler.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: OpenAIKit.Request) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/RequestHandler/NIORequestHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "435432BE-1866-4E7A-A85E-64FD494D92D7 - ca7b1edb45c9a309"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;AsyncHTTPClient.HTTPClient.Body&gt; in OpenAIKit.NIORequestHandler.perform&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(request: OpenAIKit.Request) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/RequestHandler/NIORequestHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2489,6 +2519,212 @@
                   offsetFromSymbolStart = "164">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4081CB55-99CD-4312-BB1B-6965EB9FA875"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/Chat/ChatProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "create(model:messages:temperature:topP:n:stops:maxTokens:presencePenalty:frequencyPenalty:logitBias:user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4081CB55-99CD-4312-BB1B-6965EB9FA875 - 55f2c0ab42a1abbf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for OpenAIKit.ChatProvider.create(model: OpenAIKit.ModelID, messages: Swift.Array&lt;OpenAIKit.Chat.Message&gt;, temperature: Swift.Double, topP: Swift.Double, n: Swift.Int, stops: Swift.Array&lt;Swift.String&gt;, maxTokens: Swift.Optional&lt;Swift.Int&gt;, presencePenalty: Swift.Double, frequencyPenalty: Swift.Double, logitBias: Swift.Dictionary&lt;Swift.String, Swift.Int&gt;, user: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; OpenAIKit.Chat"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/Chat/ChatProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "660">
+               </Location>
+               <Location
+                  uuid = "4081CB55-99CD-4312-BB1B-6965EB9FA875 - 20ce1bc8922f8caf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for OpenAIKit.ChatProvider.create(model: OpenAIKit.ModelID, messages: Swift.Array&lt;OpenAIKit.Chat.Message&gt;, temperature: Swift.Double, topP: Swift.Double, n: Swift.Int, stops: Swift.Array&lt;Swift.String&gt;, maxTokens: Swift.Optional&lt;Swift.Int&gt;, presencePenalty: Swift.Double, frequencyPenalty: Swift.Double, logitBias: Swift.Dictionary&lt;Swift.String, Swift.Int&gt;, user: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; OpenAIKit.Chat"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/Chat/ChatProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "4081CB55-99CD-4312-BB1B-6965EB9FA875 - c528d9b0d2b897bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for OpenAIKit.ChatProvider.create(model: OpenAIKit.ModelID, messages: Swift.Array&lt;OpenAIKit.Chat.Message&gt;, temperature: Swift.Double, topP: Swift.Double, n: Swift.Int, stops: Swift.Array&lt;Swift.String&gt;, maxTokens: Swift.Optional&lt;Swift.Int&gt;, presencePenalty: Swift.Double, frequencyPenalty: Swift.Double, logitBias: Swift.Dictionary&lt;Swift.String, Swift.Int&gt;, user: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; OpenAIKit.Chat"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/Chat/ChatProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "4081CB55-99CD-4312-BB1B-6965EB9FA875 - fd32223a2abc7dba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for OpenAIKit.ChatProvider.create(model: OpenAIKit.ModelID, messages: Swift.Array&lt;OpenAIKit.Chat.Message&gt;, temperature: Swift.Double, topP: Swift.Double, n: Swift.Int, stops: Swift.Array&lt;Swift.String&gt;, maxTokens: Swift.Optional&lt;Swift.Int&gt;, presencePenalty: Swift.Double, frequencyPenalty: Swift.Double, logitBias: Swift.Dictionary&lt;Swift.String, Swift.Int&gt;, user: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; OpenAIKit.Chat"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/Chat/ChatProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "779AC70B-F56F-4855-903F-4AD2DB3C50F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/RequestHandler/RequestHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "generateURL(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BDF472D-AAFB-4638-96E1-99F30F5D03F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/RequestHandler/RequestHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "generateURL(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70A86CD0-2B33-4D76-8A24-F70537D6A295"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/Convict_Conditioning_Pro-cfgfujbqikdjdjgmmnjsejbdehyg/SourcePackages/checkouts/openai-kit/Sources/OpenAIKit/RequestHandler/RequestHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "generateURL(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FE3E61C-90A2-4545-9384-5F3E7D5C5C92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/parser/EnumOutputParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "get_format_instructions()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7FE3E61C-90A2-4545-9384-5F3E7D5C5C92 - fd1de6feedeb977c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LangChain.EnumOutputParser.get_format_instructions() -&gt; Swift.String"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/parser/EnumOutputParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "7FE3E61C-90A2-4545-9384-5F3E7D5C5C92 - fd1de6feedeb977c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LangChain.EnumOutputParser.get_format_instructions() -&gt; Swift.String"
+                  moduleName = "Convict Conditioning Pro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/guyanhua/code/github/langchain-swift/Sources/LangChain/parser/EnumOutputParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2283FE82-EFC5-425C-8E69-7774F4BF88C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Convict Conditioning Pro/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5586797-384C-4040-B700-7E95E32F8CD8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../langchain-swift/Sources/LangChain/parser/EnumOutputParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "parse(text:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

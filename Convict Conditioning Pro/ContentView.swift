@@ -50,7 +50,7 @@ struct ContentView: View {
         
 //        let s1 = PromptTemplate(input_variables: ["1", "2"], template: SUFFIX).format(args: [ "dog" , "cat"] )
 //        print(s1)
-        let llm = OpenAI()
+//        let llm = OpenAI()
 //        Task {
 //            let reply = await llm.send(text: "hi", stops: ["\\nObservation: ", "\\n\\tObservation: "])
 //            print(reply)
@@ -85,11 +85,11 @@ struct ContentView: View {
 ////            print(response.count)
 //        }
 //        
-        let agent = initialize_agent(llm: llm, tools: [WeatherTool(callbacks: [StdOutCallbackHandler()])], callbacks: [StdOutCallbackHandler()])
-        Task {
-            let answer = await agent.run(args: "Query the weather of this week")
-            print(answer.llm_output!)
-        }
+//        let agent = initialize_agent(llm: llm, tools: [WeatherTool(callbacks: [StdOutCallbackHandler()])], callbacks: [StdOutCallbackHandler()])
+//        Task {
+//            let answer = await agent.run(args: "Query the weather of this week")
+//            print(answer.llm_output!)
+//        }
 //        let name = "state_of_the_union.txt"
 //        let loader = TextLoader(file_path: name)
 //        let c = loader.load()
@@ -313,6 +313,47 @@ struct ContentView: View {
 //            }
 //            
 //        }
+//        let llama2 = OpenAI()
+//        let llama2 = Llama2()
+//        Task {
+//            let r = await llama2.send(text: "你好")
+//            print("llm: \(r.llm_output!)")
+//        }
+        enum MyEnum: String, CaseIterable  {
+            case value1
+            case value2
+            case value3
+        }
+        for v in MyEnum.allCases {
+            print(v.rawValue)
+        }
+        let llm = OpenAI()
+        let parser = EnumOutputParser<MyEnum>(enumType: MyEnum.self)
+        let i = parser.get_format_instructions()
+        print("ins: \(i)")
+        let t = PromptTemplate(input_variables: [], template: "Answer the user query.\n" + parser.get_format_instructions() + "\n%@")
+        
+        let chain = LLMChain(llm: llm, prompt: t, parser: parser)
+        Task {
+            let result = await chain.predict_and_parse(args: ["text": "Value is 'value2"])
+            switch result {
+               case .enumType(let e):
+                   print("enum: \(e)")
+               default:
+                   print("parse fail. \(result)")
+               }
+        }
+//        let parser = EnumOutputParser<MyEnum>(enumType: MyEnum.self)
+//        let i = parser.get_format_instructions()
+//        print("ins: \(i)")
+//        let result = parser.parse(text: "value1")
+//        switch result {
+//        case .enumType(let e):
+//            print("enum: \(e)")
+//        default:
+//            print("parse fail.")
+//        }
+        
     }
     var body: some View {
 //        NavigationView {
