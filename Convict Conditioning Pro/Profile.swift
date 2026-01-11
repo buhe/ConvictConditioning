@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
-import LangChain
+
+// 扩展UIImage使其遵循Identifiable协议
+extension UIImage: Identifiable {
+    public var id: String {
+        return "\(self.hash)"
+    }
+}
 
 struct Profile: View {
     @Environment(\.colorScheme) private var colorScheme
-    @AppStorage(wrappedValue: "waiting...", "recommend") var recommend
     @AppStorage(wrappedValue: "", "steps") var steps
     var viewModel: ViewModel
     let tags = ["Pushup", "Squat", "Pullup", "Leg raise", "Bridge", "Handstand Pushup"]
+    @State private var shareImage: UIImage?
+    @State private var isGeneratingImage = false
+    @State private var showShareSheet = false
     var chartView: some View {
         VStack {
             ZStack{
@@ -133,45 +141,63 @@ struct Profile: View {
                     
                 }
             }.listStyle(PlainListStyle())
-            ScrollView{
-                Text(recommend)
-                    .onAppear{
-                        let steps = viewModel.tops.map{ String($0.step) }.joined()
-                        print("steps \(steps)")
-                        if self.steps != steps {
-                            self.steps = steps
-                            Task{
-                                let llm = OpenAI()
-                                var p = "There are 6 sports in total, which are " + tags.joined(separator: ",")
-                                p += ". My progress is: "
-                                for i in viewModel.tops {
-                                    p += i.title
-                                    p += "  to complete "
-                                    p += String(i.step)
-                                    p += " step,"
-                                }
-                                p += "What's next for the suggestion? Give me advice anyway. "
-                                print(p)
-                                let result = await llm.send(text: p)
-                                print(result)
-                                recommend = result
-                                
-                            }
-                        }
-                    }
-                    .padding()
-            }
         }
         
     }
+    
     var body: some View {
-        VStack {
-            chartView.padding(.vertical)
-//            ShareLink(item: Image(uiImage: generateSnapshot()), preview: SharePreview("Profile", image: Image(uiImage: generateSnapshot())))
-//            // FIXME - share image is not corret
-//                .buttonStyle(.borderedProminent).padding()
+        NavigationView {
+            VStack {
+                chartView.padding(.vertical)
+            }
+//            .navigationTitle("个人资料")
+//            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        shareRadarImage()
+                    }) {
+                        if isGeneratingImage {
+                            ProgressView()
+                                .scaleEffect(0.8)
+                                .progressViewStyle(CircularProgressViewStyle(tint: .blue))
+                        } else {
+                            Image(systemName: "square.and.arrow.up")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    .disabled(isGeneratingImage)
+                }
+            }
         }
+        .sheet(isPresented: $showShareSheet) {
+            if let image = shareImage {
+                ShareSheet(activityItems: [image])
+            }
+        }
+        .onChange(of: shareImage) { newImage in
+            if newImage != nil {
+                showShareSheet = true
+            }
+        }
+    }
+    
+    private func shareRadarImage() {
+        isGeneratingImage = true
         
+        let data = viewModel.tops.map { Double($0.step) }
+        let labels = viewModel.tops.map { $0.title }
+        
+        // 在后台线程生成图片，避免阻塞UI
+        DispatchQueue.global(qos: .userInitiated).async {
+            let image = RadarImageGenerator.generateRadarImage(data: data, labels: labels)
+            
+            // 回到主线程更新UI
+            DispatchQueue.main.async {
+                self.shareImage = image
+                self.isGeneratingImage = false
+            }
+        }
     }
     
     @MainActor

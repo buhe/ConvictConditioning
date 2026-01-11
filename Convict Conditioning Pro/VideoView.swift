@@ -8,6 +8,7 @@
 import SwiftUI
 import AVKit
 import SwiftUIX
+import CoreData
 
 struct VideoView: View {
     let step: Step
@@ -26,25 +27,16 @@ struct VideoView: View {
     var button: some View {
         if foundStep {
             Button {
+                disable()
+                foundStep.toggle()
             } label: {
-                Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
-            }.buttonStyle(.borderedProminent).padding(.large).disabled(true)
+                Text("UNDONE").fontWeight(.bold).frame(width: 300).padding(5)
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.large)
         } else {
             Button {
-                let newItem = Item(context: viewContext)
-                newItem.type = Int16(step.type)
-                newItem.step = Int16(step.step)
-                newItem.timestamp = Date()
-
-                do {
-                    try viewContext.save()
-                    foundStep = true
-                } catch {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    let nsError = error as NSError
-                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-                }
+                enable()
             } label: {
                 Text("DONE").fontWeight(.bold).frame(width: 300).padding(5)
             }.buttonStyle(.borderedProminent).padding(.large)
@@ -98,6 +90,41 @@ struct VideoView: View {
             Button("OK", role: .cancel) { }
         }.ignoresSafeArea()
 
+    }
+    
+    func enable() {
+        let newItem = Item(context: viewContext)
+        newItem.type = Int16(step.type)
+        newItem.step = Int16(step.step)
+        newItem.timestamp = Date()
+
+        do {
+            try viewContext.save()
+            foundStep = true
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    func disable() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+
+        let predicate = NSPredicate(format: "%K == %@ AND %K == %@", argumentArray: ["type", step.type, "step", step.step])
+
+        fetchRequest.predicate = predicate
+           do {
+               let results = try viewContext.fetch(fetchRequest) as! [NSManagedObject]
+               for object in results {
+                   viewContext.delete(object)
+               }
+
+               try viewContext.save()
+           } catch let error as NSError {
+               print("Delete error: \(error), \(error.userInfo)")
+           }
     }
 }
 

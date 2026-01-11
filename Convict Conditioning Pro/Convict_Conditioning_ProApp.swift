@@ -12,7 +12,7 @@ struct Convict_Conditioning_ProApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
-        WindowGroup {
+        return WindowGroup {
             ContentView(viewModel: ViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
