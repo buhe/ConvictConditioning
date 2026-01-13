@@ -1,4 +1,4 @@
 # To Do List
 
 - [x] 雷达图作为图片分享
-- [ ] 分析图右下角 by Convict Conditioning Pro
+- [ ] 分享生成的图片右下角 by Convict Conditioning Pro
