@@ -127,13 +127,14 @@ class RadarImageGenerator {
     private static func drawWatermark(context: UIGraphicsImageRendererContext, size: CGSize) {
         let watermarkText = "by Convict Conditioning Pro"
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 12, weight: .medium),  // 减小字体大小
-            .foregroundColor: UIColor.gray.withAlphaComponent(0.6)  // 稍微降低透明度
+            .font: UIFont.systemFont(ofSize: 12, weight: .medium),
+            .foregroundColor: UIColor.gray.withAlphaComponent(0.6)
         ]
         
         let textSize = (watermarkText as NSString).size(withAttributes: attributes)
         let padding: CGFloat = 16
-        let bottomPadding: CGFloat = 50  // 进一步增加底部间距，确保不与标签重叠
+        // 将水印放在最底部，与图像底边保持最小间距
+        let bottomPadding: CGFloat = 4
         let textRect = CGRect(
             x: size.width - textSize.width - padding,
             y: size.height - textSize.height - bottomPadding,
